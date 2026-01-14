@@ -268,7 +268,7 @@ def build_xml(programmes: List[Programme]) -> str:
 
 def main():
     html = fetch_html(PROGRAMACION_URL)
-    soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html, "html.parser")
 
     tabs, articles = find_tabs_and_sections(soup)
     if not articles:
