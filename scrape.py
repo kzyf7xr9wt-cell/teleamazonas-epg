@@ -12,13 +12,13 @@ CHANNEL_ID = "teleamazonas.ec"
 CHANNEL_NAME = "Teleamazonas"
 DAYS = 7
 
-# Ecuador timezone (always UTC-5)
+# Source timezone (Ecuador is always UTC-5)
 TZ_EC = timezone(timedelta(hours=-5))
 
-# Your local timezone (adjust if ever needed)
+# Output timezone for your device / UHF (New York)
 LOCAL_TZ = ZoneInfo("America/New_York")
 
-# Match HH:MM (24-hour format)
+# Match HH:MM (24-hour)
 TIME_RE = re.compile(r"(?:[01]?\d|2[0-3]):[0-5]\d")
 
 HEADERS = {
@@ -36,37 +36,44 @@ def fetch_day_html(date_obj):
     return r.text
 
 
-def clean_title(raw_title):
+def clean_title(raw_title: str) -> str:
     """
     Remove duplicated prefixes and junk like:
     'AM AM Noticias' -> 'Noticias'
     'PM PM Sed de Venganza' -> 'Sed de Venganza'
     """
     title = raw_title.strip()
-
-    # Remove multiple spaces
     title = re.sub(r"\s+", " ", title)
 
-    # Remove leading AM / PM duplicates repeatedly
+    # Repeatedly strip leading AM/PM tokens and duplicated first word
     while True:
         parts = title.split(" ")
-        if len(parts) >= 2 and parts[0].lower() == parts[1].lower():
-            title = " ".join(parts[1:])
-        elif parts[0].lower() in ("am", "pm"):
-            title = " ".join(parts[1:])
-        else:
-            break
+        if not parts:
+            return ""
 
-    # Final cleanup
-    title = title.strip()
+        # Strip leading am/pm tokens
+        if parts[0].lower() in ("am", "pm"):
+            title = " ".join(parts[1:]).strip()
+            continue
+
+        # Strip duplicated first token (e.g. "AM AM", "Noticias Noticias")
+        if len(parts) >= 2 and parts[0].lower() == parts[1].lower():
+            title = " ".join(parts[1:]).strip()
+            continue
+
+        break
+
+    title = re.sub(r"\s+", " ", title).strip()
     return title
 
 
-def parse_schedule_from_html(html):
+def parse_schedule_from_html(html: str):
     """
     Flexible parser:
-    - Searches table rows for any HH:MM
-    - Extracts remaining text as title
+    - Reads all <tr> rows
+    - Finds HH:MM anywhere in the row text
+    - Treats remaining text (minus times) as the title
+    Returns list of (time_str, title_str)
     """
     soup = BeautifulSoup(html, "html.parser")
     schedule = []
@@ -82,17 +89,15 @@ def parse_schedule_from_html(html):
 
         time_str = m.group(0)
 
-        # Remove all times from the row text
+        # Remove all time occurrences, keep the rest as candidate title
         title = TIME_RE.sub(" ", row_text)
         title = re.sub(r"\s+", " ", title).strip()
 
-        # Filter obvious junk headers
-        junk = ["Horarios", "Programación", "Hora", "Canal"]
-        if any(j.lower() in title.lower() for j in junk):
+        # Skip obvious headers
+        if re.search(r"(Horarios|Programación|Hora\s+Inicio|Hora\s+Fin|Canal)", title, re.IGNORECASE):
             continue
 
         title = clean_title(title)
-
         if len(title) < 2:
             continue
 
@@ -101,47 +106,47 @@ def parse_schedule_from_html(html):
     # Deduplicate while preserving order
     seen = set()
     clean = []
-    for item in schedule:
-        if item not in seen:
-            seen.add(item)
-            clean.append(item)
+    for t, title in schedule:
+        key = (t, title)
+        if key not in seen:
+            seen.add(key)
+            clean.append((t, title))
 
     return clean
 
 
 def build_programmes(tv, date_obj, schedule):
     """
-    Builds XMLTV programme entries.
-    Handles midnight rollover and timezone conversion.
+    Build XMLTV programme entries.
+    - Interprets scraped times as Ecuador time
+    - Converts to LOCAL_TZ (New York)
+    - Writes timestamps WITH timezone offsets for UHF compatibility
+    - Handles midnight rollover (time goes backwards -> next day)
     """
     starts = []
     current_date = date_obj
     prev_minutes = None
 
+    # Build start datetimes
     for time_str, title in schedule:
         hh, mm = map(int, time_str.split(":"))
         minutes = hh * 60 + mm
 
-        # Detect midnight rollover
+        # Midnight rollover detection
         if prev_minutes is not None and minutes < prev_minutes:
             current_date = current_date + timedelta(days=1)
 
-        # Ecuador time
         start_ec = datetime(
-            current_date.year,
-            current_date.month,
-            current_date.day,
-            hh,
-            mm,
-            tzinfo=TZ_EC,
+            current_date.year, current_date.month, current_date.day,
+            hh, mm, tzinfo=TZ_EC
         )
 
-        # Convert to local timezone for IPTV compatibility
         start_local = start_ec.astimezone(LOCAL_TZ)
-
         starts.append((start_local, title))
+
         prev_minutes = minutes
 
+    # Create programme blocks with stop times
     for idx, (start_dt, title) in enumerate(starts):
         if idx + 1 < len(starts):
             stop_dt = starts[idx + 1][0]
@@ -149,8 +154,8 @@ def build_programmes(tv, date_obj, schedule):
             stop_dt = start_dt + timedelta(minutes=30)
 
         prog = ET.SubElement(tv, "programme", channel=CHANNEL_ID)
-        prog.set("start", start_dt.strftime("%Y%m%d%H%M%S"))
-        prog.set("stop", stop_dt.strftime("%Y%m%d%H%M%S"))
+        prog.set("start", start_dt.strftime("%Y%m%d%H%M%S %z"))
+        prog.set("stop", stop_dt.strftime("%Y%m%d%H%M%S %z"))
         ET.SubElement(prog, "title").text = title
 
 
@@ -162,7 +167,9 @@ def main():
     ch = ET.SubElement(tv, "channel", id=CHANNEL_ID)
     ET.SubElement(ch, "display-name").text = CHANNEL_NAME
 
+    # Use Ecuador date as the "schedule day" anchor
     today = datetime.now(TZ_EC).date()
+
     total_items = 0
 
     for d in range(DAYS):
