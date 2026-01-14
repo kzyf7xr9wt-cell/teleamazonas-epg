@@ -1,107 +1,67 @@
-import re
 import requests
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 
-URL = "https://www.teleamazonas.com/programacion/"
-TZ_EC = timezone(timedelta(hours=-5))
+BASE_URL = "https://www.gatotv.com/canal/teleamazonas/"
+CHANNEL_ID = "teleamazonas.ec"
+DAYS = 7
 
-CH_QUITO = "teleamazonas.ec.quito"
-CH_GUAYAQUIL = "teleamazonas.ec.guayaquil"
-
-def html_to_lines(html: str):
-    soup = BeautifulSoup(html, "html.parser")
-    text = soup.get_text("\n")  # <-- KEY FIX: convert HTML to visible text
-    lines = [ln.strip() for ln in text.splitlines()]
-    return [ln for ln in lines if ln]
-
-def extract_pairs(lines):
-    # Find the schedule area
-    start = None
-    for i, ln in enumerate(lines):
-        if "PARRILLA DE PROGRAMACIÓN" in ln:
-            start = i
-            break
-    if start is None:
-        return []
-
-    chunk = lines[start:start+2500]
-    time_re = re.compile(r"^\d{2}:\d{2}$")
-
-    pairs = []
-    i = 0
-    while i < len(chunk) - 1:
-        if time_re.match(chunk[i]):
-            t = chunk[i]
-            # next non-time line is title
-            j = i + 1
-            while j < len(chunk) and (time_re.match(chunk[j]) or chunk[j] == ""):
-                j += 1
-            if j < len(chunk):
-                title = chunk[j]
-                # Skip obvious non-titles
-                if title not in {"Quito", "Guayaquil", "Programación", "Parrilla"}:
-                    pairs.append((t, title))
-            i = j + 1
-        else:
-            i += 1
-    return pairs
-
-def split_quito_guayaquil(pairs):
-    # Split when Guayaquil-specific titles begin
-    for idx, (_, title) in enumerate(pairs):
-        if "Guayaquil" in title:
-            return pairs[:idx], pairs[idx:]
-    # fallback: if not found, copy same list to both
-    return pairs, pairs
-
-def add_programmes(tv, channel_id, pairs, base_date):
-    # Build start datetimes and infer stops from next start
-    starts = []
-    current_date = base_date
-    prev_minutes = None
-
-    for hhmm, title in pairs:
-        hh, mm = map(int, hhmm.split(":"))
-        minutes = hh * 60 + mm
-        if prev_minutes is not None and minutes < prev_minutes:
-            current_date += timedelta(days=1)  # crossed midnight
-        dt = datetime(current_date.year, current_date.month, current_date.day, hh, mm, tzinfo=TZ_EC)
-        starts.append((dt, title))
-        prev_minutes = minutes
-
-    for k, (dt, title) in enumerate(starts):
-        stop = starts[k+1][0] if k+1 < len(starts) else dt + timedelta(minutes=30)
-        prog = ET.SubElement(tv, "programme", channel=channel_id)
-        prog.set("start", dt.strftime("%Y%m%d%H%M%S %z"))
-        prog.set("stop", stop.strftime("%Y%m%d%H%M%S %z"))
-        ET.SubElement(prog, "title").text = title
-
-def main():
-    r = requests.get(URL, timeout=25, headers={"User-Agent": "Mozilla/5.0"})
+def fetch_day_html(date_str):
+    url = f"{BASE_URL}{date_str}"
+    r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=20)
     r.raise_for_status()
+    return r.text
 
-    lines = html_to_lines(r.text)
-    pairs = extract_pairs(lines)
-    quito_pairs, guayaquil_pairs = split_quito_guayaquil(pairs)
+def parse_schedule(html, date_obj):
+    soup = BeautifulSoup(html, "html.parser")
+    rows = soup.select("table tr")
 
-    tv = ET.Element("tv", attrib={"generator-info-name": "teleamazonas-html"})
+    schedule = []
+    for row in rows:
+        cols = row.find_all("td")
+        if len(cols) >= 2:
+            time_text = cols[0].get_text(strip=True)
+            title_text = cols[1].get_text(strip=True)
+            if time_text and title_text:
+                # normalize time format like "22:30"
+                schedule.append((time_text, title_text))
+    return schedule
 
-    # Channels
-    ch = ET.SubElement(tv, "channel", id=CH_QUITO)
-    ET.SubElement(ch, "display-name").text = "Teleamazonas (Quito)"
-    ch = ET.SubElement(tv, "channel", id=CH_GUAYAQUIL)
-    ET.SubElement(ch, "display-name").text = "Teleamazonas (Guayaquil)"
+def build_xml():
+    tv = ET.Element("tv", attrib={"generator-info-name": "gatotv-scraper"})
+    ch = ET.SubElement(tv, "channel", id=CHANNEL_ID)
+    ET.SubElement(ch, "display-name").text = "Teleamazonas"
 
-    today = datetime.now(TZ_EC).date()
-    base_date = datetime(today.year, today.month, today.day, tzinfo=TZ_EC)
+    today = datetime.utcnow().date()
 
-    # Programmes
-    add_programmes(tv, CH_QUITO, quito_pairs, base_date)
-    add_programmes(tv, CH_GUAYAQUIL, guayaquil_pairs, base_date)
+    for d in range(DAYS):
+        date_obj = today + timedelta(days=d)
+        date_str = date_obj.strftime("%Y-%m-%d")
+        html = fetch_day_html(date_str)
+        schedule = parse_schedule(html, date_obj)
 
+        # Build start times + stops
+        prev_dt = None
+        for i, (time_text, title) in enumerate(schedule):
+            hh, mm = map(int, time_text.split(":"))
+            start_dt = datetime(
+                date_obj.year, date_obj.month, date_obj.day, hh, mm
+            )
+
+            if i + 1 < len(schedule):
+                next_hh, next_mm = map(int, schedule[i+1][0].split(":"))
+                stop_dt = datetime(date_obj.year, date_obj.month, date_obj.day, next_hh, next_mm)
+            else:
+                stop_dt = start_dt + timedelta(minutes=30)
+
+            prog = ET.SubElement(tv, "programme", channel=CHANNEL_ID)
+            prog.set("start", start_dt.strftime("%Y%m%d%H%M%S"))
+            prog.set("stop", stop_dt.strftime("%Y%m%d%H%M%S"))
+            ET.SubElement(prog, "title").text = title
+
+    # Write XML
     ET.ElementTree(tv).write("teleamazonas.xml", encoding="utf-8", xml_declaration=True)
 
 if __name__ == "__main__":
-    main()
+    build_xml()
