@@ -1,0 +1,31 @@
+name: Update EPG
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # runs daily
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run scraper
+        run: python scrape.py
+
+      - name: Commit updated XML
+        run: |
+          git config user.name "epg-bot"
+          git config user.email "bot@github.com"
+          git add teleamazonas.xml
+          git commit -m "Auto update EPG" || echo "No changes"
+          git push
