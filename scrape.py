@@ -1,359 +1,248 @@
 #!/usr/bin/env python3
-"""
-Teleamazonas EPG scraper (Teleamazonas programación page)
-✅ Builds a 7-day XMLTV with TWO channels:
-   1) teleamazonas.ec             -> Teleamazonas (Quito / Main)  (keeps your existing ID)
-   2) teleamazonas.ec.guayaquil   -> Teleamazonas (Guayaquil)
-
-✅ Uses the site's weekly tabs/panels and anchors dates using the ACTIVE tab
-✅ Ecuador timezone (UTC-05:00)
-✅ Uses BeautifulSoup "html.parser" (no lxml needed on GitHub Actions)
-✅ Safer midnight handling (prevents random "blank" holes when the site lists items slightly out of order)
-
-Routing:
-- Title contains "Guayaquil" -> Guayaquil only
-- Title contains "Quito"     -> Quito/Main only
-- Otherwise                 -> BOTH
-"""
-
-from __future__ import annotations
-
 import re
-from dataclasses import dataclass
-from datetime import datetime, timedelta, timezone
-from typing import List, Tuple
-
+import sys
+from datetime import datetime, timedelta, timezone, date, time
 import requests
 from bs4 import BeautifulSoup
 
-# -----------------------------
-# CONFIG
-# -----------------------------
+URL = "https://www.teleamazonas.com/programacion/"
+OUT_XML = "teleamazonas.xml"
 
-PROGRAMACION_URL = "https://www.teleamazonas.com/programacion/"
-OUTPUT_XML = "teleamazonas.xml"
+# Ecuador time is UTC-5 year-round
+EC_TZ = timezone(timedelta(hours=-5))
 
-# Keep your existing Quito/Main channel-id so UHF mapping doesn't break
-CHANNEL_ID_QUITO = "teleamazonas.ec"
-CHANNEL_NAME_QUITO = "Teleamazonas (Quito / Main)"
+UA = "Mozilla/5.0 (compatible; teleamazonas-epg/2.0)"
 
-CHANNEL_ID_GYE = "teleamazonas.ec.guayaquil"
-CHANNEL_NAME_GYE = "Teleamazonas (Guayaquil)"
-
-# Ecuador time is UTC-5 (no DST)
-TZ_EC = timezone(timedelta(hours=-5))
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (teleamazonas-epg; +github-actions)"
-}
-
-# Spanish day tabs to weekday index (Mon=0..Sun=6)
-DAY_NAME_TO_INDEX = {
-    "lunes": 0,
-    "martes": 1,
-    "miércoles": 2,
-    "miercoles": 2,
-    "jueves": 3,
-    "viernes": 4,
-    "sábado": 5,
-    "sabado": 5,
-    "domingo": 6,
-}
-
-WS_RE = re.compile(r"\s+")
-TIME_RE = re.compile(r"^(\d{1,2}):(\d{2})$")
-
-
-# -----------------------------
-# DATA
-# -----------------------------
-
-@dataclass(frozen=True)
-class Programme:
-    channel_id: str
-    start: datetime
-    stop: datetime
-    title: str
-
-
-# -----------------------------
-# UTILS
-# -----------------------------
+# Website order is always: Lunes..Domingo
+DAY_INDEX_TO_NAME_ES = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 
 def clean_text(s: str) -> str:
-    s = (s or "").replace("\xa0", " ")
-    s = WS_RE.sub(" ", s).strip()
-    # Remove any accidental AM/PM prefixes if present
-    s = re.sub(r"^(AM|PM)\s+(AM|PM)\s+", "", s, flags=re.IGNORECASE)
-    s = re.sub(r"^(AM|PM)\s+", "", s, flags=re.IGNORECASE)
-    return s.strip()
+    if not s:
+        return ""
+    s = s.replace("\xa0", " ")
+    s = re.sub(r"\s+", " ", s).strip()
+    # remove duplicated AM/PM tokens if they ever appear
+    s = re.sub(r"\b(AM|PM)\b(\s+\b(AM|PM)\b)+", r"\1", s, flags=re.IGNORECASE)
+    return s
 
-
-def parse_hhmm(hhmm: str) -> Tuple[int, int]:
-    hhmm = clean_text(hhmm)
-    m = TIME_RE.match(hhmm)
+def parse_hhmm(t: str):
+    t = clean_text(t)
+    m = re.match(r"^(\d{1,2}):(\d{2})$", t)
     if not m:
-        raise ValueError(f"Bad time format: {hhmm!r}")
+        return None
     hh = int(m.group(1))
     mm = int(m.group(2))
-    if not (0 <= hh <= 23 and 0 <= mm <= 59):
-        raise ValueError(f"Invalid time: {hhmm!r}")
-    return hh, mm
-
+    if 0 <= hh <= 23 and 0 <= mm <= 59:
+        return hh, mm
+    return None
 
 def xml_escape(s: str) -> str:
-    s = s or ""
     return (s.replace("&", "&amp;")
-              .replace("<", "&lt;")
-              .replace(">", "&gt;")
-              .replace('"', "&quot;")
-              .replace("'", "&apos;"))
-
+             .replace("<", "&lt;")
+             .replace(">", "&gt;")
+             .replace('"', "&quot;")
+             .replace("'", "&apos;"))
 
 def dt_to_xmltv(dt: datetime) -> str:
-    # XMLTV datetime format: YYYYMMDDHHMMSS ±ZZZZ
+    # XMLTV format: YYYYMMDDhhmmss ±ZZZZ
     return dt.strftime("%Y%m%d%H%M%S %z")
 
+def monday_of_current_week_ec() -> date:
+    now = datetime.now(EC_TZ)
+    today = now.date()
+    # Monday=0..Sunday=6
+    return today - timedelta(days=now.weekday())
 
-def fetch_html(url: str) -> str:
-    r = requests.get(url, headers=HEADERS, timeout=30)
-    r.raise_for_status()
-    return r.text
-
-
-def route_channels(title: str) -> List[str]:
+def get_schedule_containers(soup: BeautifulSoup):
     """
-    Route each programme into Quito/Main, Guayaquil, or both.
+    Teleamazonas embeds both city schedules in the HTML.
+    Both contain a div.c-list-tv__tabs__sections with 7 <article> blocks.
+    Sometimes there are other matching divs; we select those that actually contain cards.
     """
-    t = clean_text(title).lower()
-    if "guayaquil" in t:
-        return [CHANNEL_ID_GYE]
-    if "quito" in t:
-        return [CHANNEL_ID_QUITO]
-    return [CHANNEL_ID_QUITO, CHANNEL_ID_GYE]
+    candidates = soup.select("div.c-list-tv__tabs__sections")
+    good = []
+    for sec in candidates:
+        # Must contain at least one schedule card
+        if sec.select_one("div.c-list-tv-simple__txt span"):
+            good.append(sec)
 
+    # Usually: [Quito, Guayaquil]
+    if len(good) < 2:
+        raise RuntimeError(f"Could not find both city schedule containers (found {len(good)}).")
 
-# -----------------------------
-# SCRAPING
-# -----------------------------
+    return good[0], good[1]
 
-def get_tabs_and_day_articles(soup: BeautifulSoup):
+def extract_title_from_card(card) -> str:
     """
-    Tabs: <li class="c-list-tv__tabs-item ...">Miércoles</li>
-    Articles wrapper: <div class="c-list-tv__tabs__sections"> ... <article ...> ... </article> ...
+    Robust extraction:
+    - Prefer .c-list-tv-simple__txt p
+    - If empty/missing, use the text content of .c-list-tv-simple__txt minus the time
     """
-    tabs = soup.select("li.c-list-tv__tabs-item")
+    txt = card.select_one(".c-list-tv-simple__txt")
+    if not txt:
+        return ""
 
-    sections_wrap = soup.select_one("div.c-list-tv__tabs__sections") or soup.select_one(".c-list-tv__tabs__sections")
-    if not sections_wrap:
-        raise RuntimeError("Could not find sections wrapper (.c-list-tv__tabs__sections).")
+    # Preferred title element
+    p = txt.select_one("p")
+    if p:
+        title = clean_text(p.get_text(" ", strip=True))
+        if title:
+            return title
 
-    # Day articles live here
-    articles = sections_wrap.select("article.c-list-tv__sections-item")
+    # Fallback: grab all text inside txt, then remove the time token
+    raw = clean_text(txt.get_text(" ", strip=True))
+    # raw often looks like "08:00 24 Horas Guayaquil II"
+    # remove leading time
+    raw = re.sub(r"^\d{1,2}:\d{2}\s*", "", raw).strip()
+    return raw
+
+def parse_city_container(container) -> list[list[tuple[str, str]]]:
+    """
+    Returns 7 day lists, each list is list of (HH:MM, title).
+    """
+    articles = container.select("article")
     if not articles:
-        articles = sections_wrap.select("article")
-    if not articles:
-        raise RuntimeError("Could not find day articles in the schedule wrapper.")
+        raise RuntimeError("No <article> day sections found under a city container.")
+    # Take first 7
+    articles = articles[:7]
 
-    # Keep only those that actually contain schedule items
-    articles = [a for a in articles if a.select_one("div.c-list-tv-simple__txt")]
-    if len(articles) < 7:
-        raise RuntimeError(f"Expected 7 schedule day articles; found {len(articles)}.")
+    days = []
+    for art in articles:
+        items = []
+        cards = art.select("div.c-list-tv-simple")
+        for card in cards:
+            t_el = card.select_one(".c-list-tv-simple__txt span")
+            if not t_el:
+                continue
+            t_str = clean_text(t_el.get_text(" ", strip=True))
+            if not parse_hhmm(t_str):
+                continue
 
-    return tabs, articles[:7]
+            title = extract_title_from_card(card)
+            title = clean_text(title)
+            if not title:
+                # If still empty, label it so the slot exists instead of blank
+                title = "TBA"
 
+            items.append((t_str, title))
+        days.append(items)
 
-def get_active_tab_index(tabs) -> int:
+    # Ensure exactly 7 lists
+    while len(days) < 7:
+        days.append([])
+
+    return days
+
+def build_programmes_for_city(city_days: list[list[tuple[str, str]]], city_id: str):
     """
-    Find active day tab: <li class="... active">Miércoles</li>
-    Returns weekday index Mon=0..Sun=6. Fallback: Ecuador current weekday.
+    Convert weekly tab lists into XMLTV programme entries.
+    We map Lunes..Domingo to the CURRENT week in Ecuador.
+    We also handle midnight rollover within each day.
     """
-    for li in tabs:
-        classes = li.get("class") or []
-        if "active" in classes:
-            day_name = clean_text(li.get_text(" ", strip=True)).lower()
-            if day_name in DAY_NAME_TO_INDEX:
-                return DAY_NAME_TO_INDEX[day_name]
-    return datetime.now(TZ_EC).weekday()
-
-
-def extract_points_from_article(article, base_date: datetime) -> List[Tuple[datetime, str]]:
-    """
-    Extract (datetime, title) points from a day's article.
-    Each item looks like:
-      <div class="c-list-tv-simple__txt"><span>05:00</span><p>Show</p></div>
-    """
-    points: List[Tuple[datetime, str]] = []
-    blocks = article.select("div.c-list-tv-simple__txt")
-
-    for b in blocks:
-        span = b.find("span")
-        p = b.find("p")
-        if not span or not p:
-            continue
-
-        time_text = clean_text(span.get_text(" ", strip=True))
-        title_text = clean_text(p.get_text(" ", strip=True))
-        if not time_text or not title_text:
-            continue
-
-        try:
-            hh, mm = parse_hhmm(time_text)
-        except ValueError:
-            continue
-
-        dt = datetime(base_date.year, base_date.month, base_date.day, hh, mm, tzinfo=TZ_EC)
-        points.append((dt, title_text))
-
-    # Deduplicate exact repeats
-    seen = set()
-    out: List[Tuple[datetime, str]] = []
-    for dt, title in points:
-        key = (dt.isoformat(), title.lower())
-        if key not in seen:
-            seen.add(key)
-            out.append((dt, title))
-
-    out.sort(key=lambda x: x[0])
-    return out
-
-
-def points_to_programmes(points: List[Tuple[datetime, str]]) -> List[Tuple[datetime, datetime, str]]:
-    """
-    Convert (start,title) points into (start, stop, title).
-
-    IMPORTANT:
-    The Teleamazonas HTML is sometimes slightly out-of-order.
-    Old logic treated ANY backwards time as "midnight rollover" and pushed items
-    into the next day -> caused holes (blank slots like 06:00/08:00/14:00).
-
-    Fix:
-    - Only treat a backwards jump as "midnight rollover" if it is LARGE ( > 8 hours ).
-    - Small backwards jumps are assumed to be ordering glitches and kept same-day.
-    """
-    if not points:
-        return []
-
-    fixed: List[Tuple[datetime, str]] = []
-    last_dt = points[0][0]
-    fixed.append(points[0])
-
-    for dt, title in points[1:]:
-        if dt < last_dt:
-            backwards = last_dt - dt
-# Treat any backwards jump larger than 2 hours as a rollover / ordering fix
-if backwards > timedelta(hours=2):
-                while dt < last_dt:
-                    dt = dt + timedelta(days=1)
-            # else: minor ordering issue; keep dt as-is
-
-        fixed.append((dt, title))
-
-        # Track the max timestamp so small glitches don't cascade
-        if dt > last_dt:
-            last_dt = dt
-
-    progs: List[Tuple[datetime, datetime, str]] = []
-    for i, (start_dt, title) in enumerate(fixed):
-        if i + 1 < len(fixed):
-            stop_dt = fixed[i + 1][0]
-        else:
-            stop_dt = start_dt + timedelta(minutes=30)
-
-        if stop_dt <= start_dt:
-            stop_dt = start_dt + timedelta(minutes=30)
-
-        progs.append((start_dt, stop_dt, title))
-
-    return progs
-
-
-def build_week_programmes(tabs, day_articles) -> List[Programme]:
-    """
-    Build 7 days worth of programmes for both channels.
-    Dates are anchored using the ACTIVE tab (stable, matches what you click on site).
-    """
-    today_ec = datetime.now(TZ_EC).date()
-    active_idx = get_active_tab_index(tabs)
-
-    programmes: List[Programme] = []
+    week_monday = monday_of_current_week_ec()
+    programmes = []
 
     for day_idx in range(7):
-        day_date = today_ec + timedelta(days=(day_idx - active_idx))
-        base_dt = datetime(day_date.year, day_date.month, day_date.day, 0, 0, tzinfo=TZ_EC)
+        day_date = week_monday + timedelta(days=day_idx)
+        items = city_days[day_idx]
+        if not items:
+            continue
 
-        points = extract_points_from_article(day_articles[day_idx], base_dt)
-        blocks = points_to_programmes(points)
+        starts = []
+        last_dt = None
+        rollover = 0
 
-        for start_dt, stop_dt, title in blocks:
-            for ch_id in route_channels(title):
-                programmes.append(Programme(channel_id=ch_id, start=start_dt, stop=stop_dt, title=title))
+        for (t_str, title) in items:
+            hhmm = parse_hhmm(t_str)
+            if not hhmm:
+                continue
+            hh, mm = hhmm
+            dt = datetime.combine(day_date, time(hh, mm), EC_TZ)
 
-    # Sort & dedup
-    programmes.sort(key=lambda p: (p.channel_id, p.start, p.stop, p.title.lower()))
-    deduped: List[Programme] = []
-    last_key = None
-    for p in programmes:
-        key = (p.channel_id, p.start, p.stop, p.title.lower())
-        if key != last_key:
-            deduped.append(p)
-        last_key = key
+            # If the times go backwards, we crossed midnight into the next calendar day
+            if last_dt and dt < last_dt:
+                rollover += 1
+                dt = dt + timedelta(days=rollover)
 
-    return deduped
+            starts.append((dt, title))
+            last_dt = dt
 
+        # Sort (in case HTML is out of order)
+        starts.sort(key=lambda x: x[0])
 
-# -----------------------------
-# XML OUTPUT
-# -----------------------------
+        # Create stop times
+        for i, (start_dt, title) in enumerate(starts):
+            if i + 1 < len(starts):
+                stop_dt = starts[i + 1][0]
+            else:
+                stop_dt = start_dt + timedelta(minutes=60)
+            if stop_dt <= start_dt:
+                stop_dt = start_dt + timedelta(minutes=30)
 
-def write_xml(programmes: List[Programme], path: str) -> None:
-    lines: List[str] = []
+            programmes.append((city_id, start_dt, stop_dt, title))
+
+    return programmes
+
+def write_xml(channels, programmes):
+    """
+    channels: list of (id, display_name)
+    programmes: list of (channel_id, start_dt, stop_dt, title)
+    """
+    lines = []
     lines.append('<?xml version="1.0" encoding="UTF-8"?>')
-    lines.append('<tv generator-info-name="teleamazonas-epg">')
+    lines.append('<tv generator-info-name="teleamazonas-scraper">')
 
-    # Channels
-    lines.append(f'  <channel id="{xml_escape(CHANNEL_ID_QUITO)}">')
-    lines.append(f'    <display-name>{xml_escape(CHANNEL_NAME_QUITO)}</display-name>')
-    lines.append('  </channel>')
+    for cid, cname in channels:
+        lines.append(f'  <channel id="{xml_escape(cid)}">')
+        lines.append(f'    <display-name>{xml_escape(cname)}</display-name>')
+        lines.append('  </channel>')
 
-    lines.append(f'  <channel id="{xml_escape(CHANNEL_ID_GYE)}">')
-    lines.append(f'    <display-name>{xml_escape(CHANNEL_NAME_GYE)}</display-name>')
-    lines.append('  </channel>')
+    # Sort programmes by channel then time
+    programmes.sort(key=lambda x: (x[0], x[1]))
 
-    # Programmes
-    for p in programmes:
+    for cid, start_dt, stop_dt, title in programmes:
         lines.append(
-            f'  <programme channel="{xml_escape(p.channel_id)}" '
-            f'start="{dt_to_xmltv(p.start)}" stop="{dt_to_xmltv(p.stop)}">'
+            f'  <programme channel="{xml_escape(cid)}" '
+            f'start="{dt_to_xmltv(start_dt)}" stop="{dt_to_xmltv(stop_dt)}">'
         )
-        lines.append(f'    <title>{xml_escape(p.title)}</title>')
+        lines.append(f'    <title lang="es">{xml_escape(title)}</title>')
         lines.append('  </programme>')
 
     lines.append('</tv>')
-    lines.append("")  # newline at EOF
+    xml = "\n".join(lines) + "\n"
 
-    with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
+    with open(OUT_XML, "w", encoding="utf-8") as f:
+        f.write(xml)
 
+def main():
+    r = requests.get(URL, headers={"User-Agent": UA, "Accept-Language": "es-EC,es;q=0.9,en;q=0.7"}, timeout=30)
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, "html.parser")
 
-# -----------------------------
-# MAIN
-# -----------------------------
+    quito_container, guaya_container = get_schedule_containers(soup)
 
-def main() -> None:
-    html = fetch_html(PROGRAMACION_URL)
-    soup = BeautifulSoup(html, "html.parser")
+    quito_days = parse_city_container(quito_container)
+    guaya_days = parse_city_container(guaya_container)
 
-    tabs, day_articles = get_tabs_and_day_articles(soup)
-    programmes = build_week_programmes(tabs, day_articles)
+    channels = [
+        ("teleamazonas.quito", "Teleamazonas (Quito)"),
+        ("teleamazonas.guayaquil", "Teleamazonas (Guayaquil)"),
+    ]
 
-    write_xml(programmes, OUTPUT_XML)
+    programmes = []
+    programmes.extend(build_programmes_for_city(quito_days, "teleamazonas.quito"))
+    programmes.extend(build_programmes_for_city(guaya_days, "teleamazonas.guayaquil"))
 
-    # Helpful for GitHub Actions logs
-    q_count = sum(1 for p in programmes if p.channel_id == CHANNEL_ID_QUITO)
-    g_count = sum(1 for p in programmes if p.channel_id == CHANNEL_ID_GYE)
-    print(f"Wrote {OUTPUT_XML}: Quito/Main={q_count} programmes, Guayaquil={g_count} programmes (total {len(programmes)})")
+    write_xml(channels, programmes)
 
+    # Helpful log
+    print("OK: wrote teleamazonas.xml")
+    print(f"  Quito entries: {sum(1 for p in programmes if p[0]=='teleamazonas.quito')}")
+    print(f"  Guayaquil entries: {sum(1 for p in programmes if p[0]=='teleamazonas.guayaquil')}")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        print("SCRAPER FAILED:", str(e), file=sys.stderr)
+        raise
