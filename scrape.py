@@ -241,8 +241,8 @@ def points_to_programmes(points: List[Tuple[datetime, str]]) -> List[Tuple[datet
     for dt, title in points[1:]:
         if dt < last_dt:
             backwards = last_dt - dt
-            # Only roll to next day if it REALLY looks like midnight crossover
-            if backwards > timedelta(hours=8):
+# Treat any backwards jump larger than 2 hours as a rollover / ordering fix
+if backwards > timedelta(hours=2):
                 while dt < last_dt:
                     dt = dt + timedelta(days=1)
             # else: minor ordering issue; keep dt as-is
