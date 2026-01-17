@@ -7,10 +7,10 @@
     <title>CSI</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260112013000 -0500" stop="20260112024500 -0500">
-    <title>De Lunes Lunes</title>
+    <title>De Lunes Lunes (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260112024500 -0500" stop="20260112030000 -0500">
-    <title>24 Horas Emisión Nacional</title>
+    <title>24 Horas Emisión Nacional I</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260112030000 -0500" stop="20260112031500 -0500">
     <title>Entrevistas en 24 Horas (RP)</title>
@@ -31,7 +31,7 @@
     <title>El Chapulín Colorado</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260112053000 -0500" stop="20260112055500 -0500">
-    <title>El Chavo del 8</title>
+    <title>El Chavo del Ocho</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260112055500 -0500" stop="20260112070000 -0500">
     <title>24 Horas Quito I</title>
@@ -46,7 +46,7 @@
     <title>24 Horas Quito II</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260112093000 -0500" stop="20260112120000 -0500">
-    <title>Estreno esTAmañana</title>
+    <title>esTAmañana</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260112120000 -0500" stop="20260112130000 -0500">
     <title>Pasión y Poder</title>
@@ -55,7 +55,7 @@
     <title>24 Horas Emisión Central</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260112135000 -0500" stop="20260112143000 -0500">
-    <title>24 Horas Quito</title>
+    <title>24 Horas Comunidad Quito</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260112143000 -0500" stop="20260112144000 -0500">
     <title>En Corto</title>
@@ -97,13 +97,13 @@
     <title>Cocinando a los celebrities</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260112231500 -0500" stop="20260112234500 -0500">
-    <title>Yo soy tu madre</title>
+    <title>Sed de Venganza</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260113000000 -0500" stop="20260113013000 -0500">
     <title>CSI</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260113013000 -0500" stop="20260113024500 -0500">
-    <title>MasterChef Celebrity 3 RP</title>
+    <title>MasterChef Celebrity 3 (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260113024500 -0500" stop="20260113030000 -0500">
     <title>24 Horas Nacional I (RP)</title>
@@ -127,7 +127,7 @@
     <title>El Chapulín Colorado</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260113053000 -0500" stop="20260113055500 -0500">
-    <title>El Chavo del 8</title>
+    <title>El Chavo del Ocho</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260113055500 -0500" stop="20260113070000 -0500">
     <title>24 Horas Quito I</title>
@@ -151,7 +151,7 @@
     <title>24 Horas Emisión Central</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260113135000 -0500" stop="20260113143000 -0500">
-    <title>24 Horas Quito ​</title>
+    <title>24 Horas Comunidad Quito</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260113143000 -0500" stop="20260113144000 -0500">
     <title>En Corto</title>
@@ -172,7 +172,7 @@
     <title>El Chapulín Colorado</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260113173000 -0500" stop="20260113180000 -0500">
-    <title>El Chavo del 8</title>
+    <title>El Chavo del Ocho</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260113180000 -0500" stop="20260113190000 -0500">
     <title>Papás por conveniencia</title>
@@ -241,13 +241,13 @@
     <title>esTAmañana</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260114120000 -0500" stop="20260114130000 -0500">
-    <title>Pasín y Poder</title>
+    <title>Pasión y Poder</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260114130000 -0500" stop="20260114135000 -0500">
     <title>24 Horas Emisión Central</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260114135000 -0500" stop="20260114143000 -0500">
-    <title>24 Horas Quito</title>
+    <title>24 Horas Comunidad Quito</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260114143000 -0500" stop="20260114144000 -0500">
     <title>En Corto</title>
@@ -319,7 +319,7 @@
     <title>El Chapulín Colorado</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260115053000 -0500" stop="20260115055500 -0500">
-    <title>El Chavo del 8</title>
+    <title>El Chavo del Ocho</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260115055500 -0500" stop="20260115070000 -0500">
     <title>24 Horas Quito I</title>
@@ -412,7 +412,7 @@
     <title>E Chapulín Colorado</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260116053000 -0500" stop="20260116055500 -0500">
-    <title>El Chavo del 8</title>
+    <title>El Chavo del Ocho</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260116055500 -0500" stop="20260116070000 -0500">
     <title>24 Horas Quito I</title>
@@ -457,7 +457,7 @@
     <title>El Chapulín Colorado</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260116173000 -0500" stop="20260116180000 -0500">
-    <title>El Chavo del 8</title>
+    <title>El Chavo del Ocho</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260116180000 -0500" stop="20260116190000 -0500">
     <title>Papás por conveniencia</title>
