@@ -1,5 +1,3 @@
-GOOD EPG
-
 #!/usr/bin/env python3
 # scrape.py
 #
