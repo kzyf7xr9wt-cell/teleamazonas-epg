@@ -91,7 +91,7 @@
     <title>En Corto</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260216210000 -0500" stop="20260216221500 -0500">
-    <title>De Lunes a Lunes</title>
+    <title>Guerra de papás</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260216221500 -0500" stop="20260216231500 -0500">
     <title>Cocinando a los celebrities</title>
@@ -150,14 +150,14 @@
   <programme channel="teleamazonas.ec" start="20260217130000 -0500" stop="20260217135000 -0500">
     <title>24 Horas Emisión Central</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260217135000 -0500" stop="20260217143000 -0500">
+  <programme channel="teleamazonas.ec" start="20260217135000 -0500" stop="20260217140000 -0500">
     <title>24 Horas Comunidad Quito</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260217143000 -0500" stop="20260217144000 -0500">
-    <title>En Corto</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260217144000 -0500" stop="20260217151000 -0500">
+  <programme channel="teleamazonas.ec" start="20260217140000 -0500" stop="20260217143000 -0500">
     <title>Deporte Total</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260217143000 -0500" stop="20260217151000 -0500">
+    <title>En Corto</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260217151000 -0500" stop="20260217154500 -0500">
     <title>Bob Esponja</title>
@@ -528,17 +528,20 @@
   <programme channel="teleamazonas.ec" start="20260221130000 -0500" stop="20260221140000 -0500">
     <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260221140000 -0500" stop="20260221144500 -0500">
+  <programme channel="teleamazonas.ec" start="20260221140000 -0500" stop="20260221150000 -0500">
+    <title>Documentales de animales</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260221150000 -0500" stop="20260221154500 -0500">
     <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260221144500 -0500" stop="20260221161500 -0500">
-    <title>Sábado de Cine I Simbad, la leyenda de los siete mares</title>
+  <programme channel="teleamazonas.ec" start="20260221154500 -0500" stop="20260221170000 -0500">
+    <title>Sábado de Cine I Spirit el corcel indomable</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260221161500 -0500" stop="20260221180000 -0500">
-    <title>Sábado de Cine II ​Soy leyenda</title>
+  <programme channel="teleamazonas.ec" start="20260221170000 -0500" stop="20260221184500 -0500">
+    <title>Sábado de Cine II Espías a escondidas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260221180000 -0500" stop="20260221210000 -0500">
-    <title>Noche Blanca Liga de Quito vs. Always Ready</title>
+  <programme channel="teleamazonas.ec" start="20260221184500 -0500" stop="20260221210000 -0500">
+    <title>U. Católica vs. Emelec</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260221210000 -0500" stop="20260221230000 -0500">
     <title>24 Horas Estelar</title>
@@ -604,16 +607,13 @@
     <title>Documentales de animales</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260222150000 -0500" stop="20260222153000 -0500">
-    <title>Malcolm</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260222153000 -0500" stop="20260222163000 -0500">
     <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260222163000 -0500" stop="20260222180000 -0500">
-    <title>Cine del domingo La Telaraña de Charlotte</title>
+  <programme channel="teleamazonas.ec" start="20260222153000 -0500" stop="20260222174500 -0500">
+    <title>Cine del domingo Calabozos y dragones, honor entre ladrones</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260222180000 -0500" stop="20260222200000 -0500">
-    <title>Cine en familia Al filo del mañana</title>
+  <programme channel="teleamazonas.ec" start="20260222174500 -0500" stop="20260222200000 -0500">
+    <title>Liga Pro IDV vs. Guayaquil City</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260222200000 -0500" stop="20260222210000 -0500">
     <title>24 Horas</title>
