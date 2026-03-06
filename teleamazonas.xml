@@ -516,16 +516,16 @@
   <programme channel="teleamazonas.ec" start="20260307121500 -0500" stop="20260307130000 -0500">
     <title>Día a Día (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260307130000 -0500" stop="20260307135500 -0500">
+  <programme channel="teleamazonas.ec" start="20260307130000 -0500" stop="20260307140000 -0500">
     <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260307135500 -0500" stop="20260307140000 -0500">
-    <title>Previa</title>
+  <programme channel="teleamazonas.ec" start="20260307140000 -0500" stop="20260307150000 -0500">
+    <title>Documentales de Animales</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260307140000 -0500" stop="20260307160500 -0500">
-    <title>Liga Pro U. Católica VS. Leones</title>
+  <programme channel="teleamazonas.ec" start="20260307150000 -0500" stop="20260307154500 -0500">
+    <title>Malcolm</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260307160500 -0500" stop="20260307164500 -0500">
+  <programme channel="teleamazonas.ec" start="20260307154500 -0500" stop="20260307164500 -0500">
     <title>Los Simpson</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260307164500 -0500" stop="20260307184500 -0500">
@@ -570,11 +570,11 @@
   <programme channel="teleamazonas.ec" start="20260308050000 -0500" stop="20260308060000 -0500">
     <title>Tres Patines</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260308060000 -0500" stop="20260308064500 -0500">
+  <programme channel="teleamazonas.ec" start="20260308060000 -0500" stop="20260308063000 -0500">
     <title>La cocina del chef (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260308064500 -0500" stop="20260308072500 -0500">
-    <title>Cake Boss</title>
+  <programme channel="teleamazonas.ec" start="20260308063000 -0500" stop="20260308072500 -0500">
+    <title>Los Elegidos</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260308072500 -0500" stop="20260308080000 -0500">
     <title>Misa Dominical</title>
@@ -601,13 +601,13 @@
     <title>Documentales de animales</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260308150000 -0500" stop="20260308154500 -0500">
-    <title>Malcolm</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260308154500 -0500" stop="20260308163000 -0500">
     <title>Los Simpson</title>
   </programme>
+  <programme channel="teleamazonas.ec" start="20260308154500 -0500" stop="20260308163000 -0500">
+    <title>Previa</title>
+  </programme>
   <programme channel="teleamazonas.ec" start="20260308163000 -0500" stop="20260308181500 -0500">
-    <title>Cine del domingo Don Gato el Inicio de la Pandilla</title>
+    <title>Liga Pro U. Católica VS. Leones</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260308181500 -0500" stop="20260308200000 -0500">
     <title>Cine de domingo Flora &amp; Ulyses</title>
