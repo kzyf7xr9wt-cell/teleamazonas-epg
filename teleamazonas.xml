@@ -444,10 +444,10 @@
   <programme channel="teleamazonas.ec" start="20260424230000 -0500" stop="20260424233000 -0500">
     <title>100 Días para Enamorarnos</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260425000000 -0500" stop="20260425013000 -0500">
+  <programme channel="teleamazonas.ec" start="20260425000000 -0500" stop="20260425014500 -0500">
     <title>Oceans 8, Las Estafadoras</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260425013000 -0500" stop="20260425031500 -0500">
+  <programme channel="teleamazonas.ec" start="20260425014500 -0500" stop="20260425031500 -0500">
     <title>Aida</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260425031500 -0500" stop="20260425041500 -0500">
@@ -486,20 +486,17 @@
   <programme channel="teleamazonas.ec" start="20260425130000 -0500" stop="20260425140000 -0500">
     <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260425140000 -0500" stop="20260425150000 -0500">
-    <title>Documentales de animales</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260425150000 -0500" stop="20260425153000 -0500">
-    <title>Malcolm</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260425153000 -0500" stop="20260425161500 -0500">
-    <title>Los Simpson</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260425161500 -0500" stop="20260425183500 -0500">
+  <programme channel="teleamazonas.ec" start="20260425140000 -0500" stop="20260425162000 -0500">
     <title>Liga Pro: Independiente del Valle vs. Leones</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260425183500 -0500" stop="20260425200000 -0500">
+  <programme channel="teleamazonas.ec" start="20260425162000 -0500" stop="20260425163000 -0500">
+    <title>Los Simpson</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260425163000 -0500" stop="20260425180000 -0500">
     <title>Sábados de Cine I: Los Simpson, la película</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260425180000 -0500" stop="20260425200000 -0500">
+    <title>Sábados de Cine II: Plan B</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260425200000 -0500" stop="20260425223000 -0500">
     <title>24 Horas Estelar</title>
