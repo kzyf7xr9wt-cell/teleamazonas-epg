@@ -465,10 +465,10 @@
   <programme channel="teleamazonas.ec" start="20260502140000 -0500" stop="20260502150000 -0500">
     <title>Documentales de Animales</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260502150000 -0500" stop="20260502151000 -0500">
+  <programme channel="teleamazonas.ec" start="20260502150000 -0500" stop="20260502153000 -0500">
     <title>Malcom</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260502151000 -0500" stop="20260502161500 -0500">
+  <programme channel="teleamazonas.ec" start="20260502153000 -0500" stop="20260502161500 -0500">
     <title>Los Simpson</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260502161500 -0500" stop="20260502180000 -0500">
@@ -526,7 +526,7 @@
     <title>TVENTAS</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260503100000 -0500" stop="20260503103000 -0500">
-    <title>Salud 360</title>
+    <title>La Familia Peluche</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260503103000 -0500" stop="20260503110000 -0500">
     <title>Sinfonía de Motores (RP)</title>
@@ -543,22 +543,22 @@
   <programme channel="teleamazonas.ec" start="20260503130000 -0500" stop="20260503140000 -0500">
     <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260503140000 -0500" stop="20260503150000 -0500">
+  <programme channel="teleamazonas.ec" start="20260503140000 -0500" stop="20260503143000 -0500">
     <title>Documentales de animales</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260503150000 -0500" stop="20260503153000 -0500">
-    <title>Malcom</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260503153000 -0500" stop="20260503160000 -0500">
+  <programme channel="teleamazonas.ec" start="20260503143000 -0500" stop="20260503144500 -0500">
     <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260503160000 -0500" stop="20260503175500 -0500">
+  <programme channel="teleamazonas.ec" start="20260503144500 -0500" stop="20260503164500 -0500">
     <title>Cine en Familia: Escuela de Rock</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260503175500 -0500" stop="20260503201500 -0500">
+  <programme channel="teleamazonas.ec" start="20260503164500 -0500" stop="20260503190500 -0500">
     <title>Liga Pro: Leones vs. Emelec</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260503201500 -0500" stop="20260503210000 -0500">
+  <programme channel="teleamazonas.ec" start="20260503190500 -0500" stop="20260503200000 -0500">
+    <title>Los Simpson</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260503200000 -0500" stop="20260503210000 -0500">
     <title>24 Horas</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260503210000 -0500" stop="20260503220000 -0500">
