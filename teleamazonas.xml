@@ -501,14 +501,14 @@
   <programme channel="teleamazonas.ec" start="20260509150000 -0500" stop="20260509153000 -0500">
     <title>Malcom</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260509153000 -0500" stop="20260509163000 -0500">
+  <programme channel="teleamazonas.ec" start="20260509153000 -0500" stop="20260509161500 -0500">
     <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260509163000 -0500" stop="20260509181500 -0500">
-    <title>Sábados de Cine I</title>
+  <programme channel="teleamazonas.ec" start="20260509161500 -0500" stop="20260509183500 -0500">
+    <title>Liga Pro Aucas vs. U. Católica</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260509181500 -0500" stop="20260509200000 -0500">
-    <title>Sábado de cine II</title>
+  <programme channel="teleamazonas.ec" start="20260509183500 -0500" stop="20260509200000 -0500">
+    <title>Sábados de Cine I: ​Jack el Canguro</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260509200000 -0500" stop="20260509210000 -0500">
     <title>24 Horas</title>
@@ -588,14 +588,14 @@
   <programme channel="teleamazonas.ec" start="20260510150000 -0500" stop="20260510153000 -0500">
     <title>Malcom</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260510153000 -0500" stop="20260510163000 -0500">
+  <programme channel="teleamazonas.ec" start="20260510153000 -0500" stop="20260510161500 -0500">
     <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260510163000 -0500" stop="20260510181500 -0500">
-    <title>Cine del Domingo</title>
+  <programme channel="teleamazonas.ec" start="20260510161500 -0500" stop="20260510181500 -0500">
+    <title>Cine del Domingo Mamma Mia!</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260510181500 -0500" stop="20260510200000 -0500">
-    <title>Cine en Familia</title>
+    <title>Cine en Familia ​Qué Esperar Cuando Estás Esperando</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260510200000 -0500" stop="20260510210000 -0500">
     <title>24 Horas</title>
