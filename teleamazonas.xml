@@ -150,10 +150,10 @@
   <programme channel="teleamazonas.ec" start="20260526170000 -0500" stop="20260526173000 -0500">
     <title>El Chapulín Colorado</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260526173000 -0500" stop="20260526180000 -0500">
+  <programme channel="teleamazonas.ec" start="20260526173000 -0500" stop="20260526174500 -0500">
     <title>El Chavo del Ocho</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260526180000 -0500" stop="20260526190000 -0500">
+  <programme channel="teleamazonas.ec" start="20260526174500 -0500" stop="20260526190000 -0500">
     <title>Juana la Virgen</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260526190000 -0500" stop="20260526200000 -0500">
@@ -240,10 +240,10 @@
   <programme channel="teleamazonas.ec" start="20260527170000 -0500" stop="20260527173000 -0500">
     <title>El Chapulín Colorado</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260527173000 -0500" stop="20260527180000 -0500">
+  <programme channel="teleamazonas.ec" start="20260527173000 -0500" stop="20260527174500 -0500">
     <title>El Chavo del Ocho</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260527180000 -0500" stop="20260527190000 -0500">
+  <programme channel="teleamazonas.ec" start="20260527174500 -0500" stop="20260527190000 -0500">
     <title>Juana la Virgen</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260527190000 -0500" stop="20260527200000 -0500">
@@ -330,10 +330,10 @@
   <programme channel="teleamazonas.ec" start="20260528170000 -0500" stop="20260528173000 -0500">
     <title>El Chapulín Colorado</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260528173000 -0500" stop="20260528180000 -0500">
+  <programme channel="teleamazonas.ec" start="20260528173000 -0500" stop="20260528174500 -0500">
     <title>El Chavo del Ocho</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260528180000 -0500" stop="20260528190000 -0500">
+  <programme channel="teleamazonas.ec" start="20260528174500 -0500" stop="20260528190000 -0500">
     <title>Juana la Virgen</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260528190000 -0500" stop="20260528200000 -0500">
@@ -417,10 +417,10 @@
   <programme channel="teleamazonas.ec" start="20260529170000 -0500" stop="20260529173000 -0500">
     <title>El Chapulín Colorado</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260529173000 -0500" stop="20260529180000 -0500">
+  <programme channel="teleamazonas.ec" start="20260529173000 -0500" stop="20260529174500 -0500">
     <title>El Chavo del Ocho</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260529180000 -0500" stop="20260529190000 -0500">
+  <programme channel="teleamazonas.ec" start="20260529174500 -0500" stop="20260529190000 -0500">
     <title>Juana la Virgen</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260529190000 -0500" stop="20260529200000 -0500">
@@ -489,14 +489,14 @@
   <programme channel="teleamazonas.ec" start="20260530150000 -0500" stop="20260530153000 -0500">
     <title>Malcom</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260530153000 -0500" stop="20260530161500 -0500">
+  <programme channel="teleamazonas.ec" start="20260530153000 -0500" stop="20260530163000 -0500">
     <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260530161500 -0500" stop="20260530183500 -0500">
-    <title>Liga Pro ​Orense vs. Católica</title>
+  <programme channel="teleamazonas.ec" start="20260530163000 -0500" stop="20260530181500 -0500">
+    <title>Sábados de Cine I: El Reino Prohibido</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260530183500 -0500" stop="20260530200000 -0500">
-    <title>Sábados de Cine II: ​Locuras en el Bosque</title>
+  <programme channel="teleamazonas.ec" start="20260530181500 -0500" stop="20260530200000 -0500">
+    <title>Sábado de Cine II: No se Aceptan Devoluciones</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260530200000 -0500" stop="20260530210000 -0500">
     <title>24 Horas</title>
@@ -540,11 +540,11 @@
   <programme channel="teleamazonas.ec" start="20260531050000 -0500" stop="20260531060000 -0500">
     <title>Tres Patines</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260531060000 -0500" stop="20260531063000 -0500">
+  <programme channel="teleamazonas.ec" start="20260531060000 -0500" stop="20260531064500 -0500">
     <title>La cocina del chef (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260531063000 -0500" stop="20260531072500 -0500">
-    <title>Documentales de Animales</title>
+  <programme channel="teleamazonas.ec" start="20260531064500 -0500" stop="20260531072500 -0500">
+    <title>Sinfonía de Motores</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260531072500 -0500" stop="20260531080000 -0500">
     <title>Misa Dominical</title>
@@ -555,13 +555,13 @@
   <programme channel="teleamazonas.ec" start="20260531100000 -0500" stop="20260531103000 -0500">
     <title>Salud 360</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260531103000 -0500" stop="20260531110000 -0500">
-    <title>Sinfonía de Motores (RP)</title>
+  <programme channel="teleamazonas.ec" start="20260531103000 -0500" stop="20260531113000 -0500">
+    <title>Carrera 15K</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260531110000 -0500" stop="20260531120000 -0500">
+  <programme channel="teleamazonas.ec" start="20260531113000 -0500" stop="20260531121500 -0500">
     <title>El Buscador (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260531120000 -0500" stop="20260531123000 -0500">
+  <programme channel="teleamazonas.ec" start="20260531121500 -0500" stop="20260531123000 -0500">
     <title>El Chapulín Colorado</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260531123000 -0500" stop="20260531130000 -0500">
@@ -577,15 +577,15 @@
     <title>Los Simpson</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260531151500 -0500" stop="20260531173500 -0500">
-    <title>Liga Pro ​Emelec vs Macará</title>
+    <title>Liga Pro Guayaquil City vs. Independeinte del Valle</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260531173500 -0500" stop="20260531180000 -0500">
-    <title>Los Simpson</title>
+  <programme channel="teleamazonas.ec" start="20260531173500 -0500" stop="20260531180500 -0500">
+    <title>Más Fútbol ​</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260531180000 -0500" stop="20260531200000 -0500">
-    <title>Cine en Familia ​Unidos</title>
+  <programme channel="teleamazonas.ec" start="20260531173500 -0500" stop="20260531201500 -0500">
+    <title>Liga Pro Emelec vs. U. Católica</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260531200000 -0500" stop="20260531210000 -0500">
+  <programme channel="teleamazonas.ec" start="20260531201500 -0500" stop="20260531210000 -0500">
     <title>24 Horas</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260531210000 -0500" stop="20260531220000 -0500">
