@@ -342,13 +342,10 @@
   <programme channel="teleamazonas.ec" start="20260619223000 -0500" stop="20260619230000 -0500">
     <title>México vs R. Corea (Diferido)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260620000000 -0500" stop="20260620030000 -0500">
+  <programme channel="teleamazonas.ec" start="20260620003000 -0500" stop="20260620033000 -0500">
     <title>Turquía vs Paraguay ​(Diferido)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260620030000 -0500" stop="20260620034500 -0500">
-    <title>Nuestro Mundial al Día (RP)</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260620034500 -0500" stop="20260620050000 -0500">
+  <programme channel="teleamazonas.ec" start="20260620033000 -0500" stop="20260620050000 -0500">
     <title>Aida</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260620050000 -0500" stop="20260620060000 -0500">
@@ -384,13 +381,13 @@
   <programme channel="teleamazonas.ec" start="20260620174500 -0500" stop="20260620213000 -0500">
     <title>Ecuador vs Curazao ​(En Vivo)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260620213000 -0500" stop="20260620223000 -0500">
+  <programme channel="teleamazonas.ec" start="20260620213000 -0500" stop="20260620230000 -0500">
     <title>Nuestro Mundial al Día</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260620223000 -0500" stop="20260620230000 -0500">
+  <programme channel="teleamazonas.ec" start="20260620230000 -0500" stop="20260620233000 -0500">
     <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260620230000 -0500" stop="20260620233000 -0500">
+  <programme channel="teleamazonas.ec" start="20260620233000 -0500" stop="20260621000000 -0500">
     <title>América Vive</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260621000000 -0500" stop="20260621003000 -0500">
@@ -409,13 +406,13 @@
     <title>Deporte Total (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260621033000 -0500" stop="20260621040000 -0500">
-    <title>Derbez en cuando</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260621033000 -0500" stop="20260621040000 -0500">
     <title>En Corto (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260621040000 -0500" stop="20260621050000 -0500">
+  <programme channel="teleamazonas.ec" start="20260621040000 -0500" stop="20260621043000 -0500">
     <title>La Familia Peluche</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260621043000 -0500" stop="20260621050000 -0500">
+    <title>Derbez en cuando</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260621050000 -0500" stop="20260621053000 -0500">
     <title>Tres Patines</title>
@@ -453,10 +450,10 @@
   <programme channel="teleamazonas.ec" start="20260621210000 -0500" stop="20260621223000 -0500">
     <title>Nuestro Mundial al Día</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260621223000 -0500" stop="20260621230000 -0500">
+  <programme channel="teleamazonas.ec" start="20260621223000 -0500" stop="20260621233000 -0500">
     <title>El Buscador</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260621230000 -0500" stop="20260621233000 -0500">
+  <programme channel="teleamazonas.ec" start="20260621233000 -0500" stop="20260622000000 -0500">
     <title>Deporte Total</title>
   </programme>
 </tv>
