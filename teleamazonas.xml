@@ -90,10 +90,10 @@
   <programme channel="teleamazonas.ec" start="20260630030000 -0500" stop="20260630031500 -0500">
     <title>24 Horas Nacional I (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260630031500 -0500" stop="20260630034500 -0500">
+  <programme channel="teleamazonas.ec" start="20260630031500 -0500" stop="20260630033000 -0500">
     <title>Entrevistas en 24 Horas (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260630031500 -0500" stop="20260630040000 -0500">
+  <programme channel="teleamazonas.ec" start="20260630033000 -0500" stop="20260630040000 -0500">
     <title>24 Horas (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260630040000 -0500" stop="20260630050000 -0500">
@@ -117,22 +117,22 @@
   <programme channel="teleamazonas.ec" start="20260630080000 -0500" stop="20260630093000 -0500">
     <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260630093000 -0500" stop="20260630113000 -0500">
+  <programme channel="teleamazonas.ec" start="20260630093000 -0500" stop="20260630110000 -0500">
     <title>esTAmañana</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260630113000 -0500" stop="20260630143000 -0500">
+  <programme channel="teleamazonas.ec" start="20260630110000 -0500" stop="20260630140000 -0500">
     <title>Brasil vs Japón (Diferido)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260630143000 -0500" stop="20260630150000 -0500">
+  <programme channel="teleamazonas.ec" start="20260630140000 -0500" stop="20260630143000 -0500">
     <title>24 Horas Emisión Central</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260630150000 -0500" stop="20260630180000 -0500">
+  <programme channel="teleamazonas.ec" start="20260630143000 -0500" stop="20260630180000 -0500">
     <title>Alemania vs Paraguay ​(Diferido)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260630180000 -0500" stop="20260630190000 -0500">
+  <programme channel="teleamazonas.ec" start="20260630180000 -0500" stop="20260630183000 -0500">
     <title>24 Horas Emisión Estelar</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260630190000 -0500" stop="20260630230000 -0500">
+  <programme channel="teleamazonas.ec" start="20260630183000 -0500" stop="20260630230000 -0500">
     <title>Ecuador vs México (En Vivo)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260630230000 -0500" stop="20260630233000 -0500">
@@ -180,10 +180,10 @@
   <programme channel="teleamazonas.ec" start="20260701080000 -0500" stop="20260701093000 -0500">
     <title>24 Horas Quito II</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260701093000 -0500" stop="20260701103000 -0500">
+  <programme channel="teleamazonas.ec" start="20260701093000 -0500" stop="20260701100000 -0500">
     <title>esTAmañana</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260701103000 -0500" stop="20260701133000 -0500">
+  <programme channel="teleamazonas.ec" start="20260701100000 -0500" stop="20260701133000 -0500">
     <title>Inglaterra vs RD El Congo ​(En vivo)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260701133000 -0500" stop="20260701142000 -0500">
