@@ -135,8 +135,11 @@
   <programme channel="teleamazonas.ec" start="20260707141500 -0500" stop="20260707143000 -0500">
     <title>24 Horas Comunidad</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260707143000 -0500" stop="20260707150000 -0500">
+  <programme channel="teleamazonas.ec" start="20260707143000 -0500" stop="20260707144500 -0500">
     <title>En Corto</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260707144500 -0500" stop="20260707150000 -0500">
+    <title>Deporte Total</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260707150000 -0500" stop="20260707180000 -0500">
     <title>Portugal vs España ​(Diferido)</title>
