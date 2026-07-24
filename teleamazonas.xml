@@ -283,16 +283,16 @@
     <title>CSI Miami</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260723013000 -0500" stop="20260723024500 -0500">
-    <title>24 Horas 2da Emisión</title>
+    <title>24 Horas 2da Emisión (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260723024500 -0500" stop="20260723030000 -0500">
     <title>24 Horas (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260723030000 -0500" stop="20260723031500 -0500">
-    <title>Entrevistas 24 Horas</title>
+    <title>Entrevistas 24 Horas (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260723031500 -0500" stop="20260723040000 -0500">
-    <title>24 Horas</title>
+    <title>24 Horas (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260723040000 -0500" stop="20260723043000 -0500">
     <title>Yo soy tu Madre</title>
@@ -364,7 +364,7 @@
     <title>24 Horas Emisión Estelar</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260723213000 -0500" stop="20260723230000 -0500">
-    <title>Nuevo Rico, Nuevo Pobre</title>
+    <title>Nuevo Rico, Nuevo Pobre 2025</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260723230000 -0500" stop="20260723233000 -0500">
     <title>100 Días Para Enamorarnos</title>
@@ -451,7 +451,7 @@
     <title>24 Horas Emisión Estelar</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260724210000 -0500" stop="20260724223000 -0500">
-    <title>Nuevo Rico, Nuevo Pobre</title>
+    <title>Nuevo Rico, Nuevo Pobre 2025</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260724223000 -0500" stop="20260724230000 -0500">
     <title>Enchufe TV</title>
