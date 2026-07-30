@@ -519,10 +519,10 @@
   <programme channel="teleamazonas.ec" start="20260801153000 -0500" stop="20260801161500 -0500">
     <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801161500 -0500" stop="20260801183000 -0500">
-    <title>Sábados de Cine I</title>
+  <programme channel="teleamazonas.ec" start="20260801161500 -0500" stop="20260801183500 -0500">
+    <title>Liga Pro U Católica vs Téc. Universitario</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801183000 -0500" stop="20260801200000 -0500">
+  <programme channel="teleamazonas.ec" start="20260801183500 -0500" stop="20260801200000 -0500">
     <title>Sábado de Cine II El Oso Yogi</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801200000 -0500" stop="20260801210000 -0500">
@@ -600,14 +600,11 @@
   <programme channel="teleamazonas.ec" start="20260802150000 -0500" stop="20260802153000 -0500">
     <title>Malcom</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260802153000 -0500" stop="20260802154500 -0500">
+  <programme channel="teleamazonas.ec" start="20260802153000 -0500" stop="20260802161500 -0500">
     <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260802154500 -0500" stop="20260802173000 -0500">
-    <title>Cine del Domingo</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260802173000 -0500" stop="20260802174500 -0500">
-    <title>Los Simpson</title>
+  <programme channel="teleamazonas.ec" start="20260802161500 -0500" stop="20260802174500 -0500">
+    <title>Cine del Domingo ​Spy Kids 3</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802174500 -0500" stop="20260802200000 -0500">
     <title>Cine en Familia Top Gun Maverick</title>
