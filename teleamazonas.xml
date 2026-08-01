@@ -69,25 +69,31 @@
   <programme channel="teleamazonas.ec" start="20260727154500 -0500" stop="20260727161500 -0500">
     <title>Doraemon</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260727161500 -0500" stop="20260727183500 -0500">
-    <title>Liga Pro ​Guayaquil City vs U. Católica</title>
+  <programme channel="teleamazonas.ec" start="20260727161500 -0500" stop="20260727170000 -0500">
+    <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260727183500 -0500" stop="20260727190000 -0500">
+  <programme channel="teleamazonas.ec" start="20260727170000 -0500" stop="20260727173000 -0500">
+    <title>El Chapulín Colorado</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260727173000 -0500" stop="20260727180000 -0500">
+    <title>El Chavo del Ocho</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260727180000 -0500" stop="20260727184500 -0500">
     <title>Papás por Siempre</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260727190000 -0500" stop="20260727200000 -0500">
-    <title>100 Ecuatorianos Dicen</title>
+  <programme channel="teleamazonas.ec" start="20260727184500 -0500" stop="20260727210000 -0500">
+    <title>Liga Pro ​Liga de Quito vs Delfín</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260727200000 -0500" stop="20260727210000 -0500">
+  <programme channel="teleamazonas.ec" start="20260727210000 -0500" stop="20260727213000 -0500">
     <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260727210000 -0500" stop="20260727221500 -0500">
+  <programme channel="teleamazonas.ec" start="20260727213000 -0500" stop="20260727224500 -0500">
     <title>De Lunes a Lunes</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260727221500 -0500" stop="20260727224500 -0500">
+  <programme channel="teleamazonas.ec" start="20260727224500 -0500" stop="20260727234500 -0500">
     <title>El After</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260727224500 -0500" stop="20260727231500 -0500">
+  <programme channel="teleamazonas.ec" start="20260727234500 -0500" stop="20260728001500 -0500">
     <title>100 Días para enamorarnos</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260728000000 -0500" stop="20260728013000 -0500">
