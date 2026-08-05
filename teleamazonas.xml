@@ -3,122 +3,29 @@
   <channel id="teleamazonas.ec">
     <display-name>Teleamazonas</display-name>
   </channel>
-  <programme channel="teleamazonas.ec" start="20260730000000 -0500" stop="20260730013000 -0500">
-    <title>CSI</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730013000 -0500" stop="20260730023000 -0500">
-    <title>De Lunes a Lunes (RP)</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730023000 -0500" stop="20260730030000 -0500">
-    <title>24 Horas (RP)</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730030000 -0500" stop="20260730031500 -0500">
-    <title>Entrevistas 24 Horas</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730031500 -0500" stop="20260730040000 -0500">
-    <title>24 Horas (RP)</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730040000 -0500" stop="20260730043000 -0500">
-    <title>Yo Soy tu Madre</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730043000 -0500" stop="20260730044500 -0500">
-    <title>La Familia P. Luche</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730044500 -0500" stop="20260730050000 -0500">
-    <title>Derbez en cuando</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730050000 -0500" stop="20260730053000 -0500">
-    <title>El Chapulín Colorado</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730053000 -0500" stop="20260730055500 -0500">
-    <title>El Chavo del Ocho</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730055500 -0500" stop="20260730070000 -0500">
-    <title>24 Horas 1ra Emisión Local</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730070000 -0500" stop="20260730073000 -0500">
-    <title>24 Horas Nacional I</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730073000 -0500" stop="20260730080000 -0500">
-    <title>Entrevistas 24 Horas</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730080000 -0500" stop="20260730093000 -0500">
-    <title>24 Horas Segunda Emisión</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730093000 -0500" stop="20260730120000 -0500">
-    <title>esTAmañana</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730120000 -0500" stop="20260730130000 -0500">
-    <title>Por Amar Sin Ley</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730130000 -0500" stop="20260730135000 -0500">
-    <title>24 Horas Emisión Central</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730135000 -0500" stop="20260730143000 -0500">
-    <title>24 Horas Comunidad</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730143000 -0500" stop="20260730144000 -0500">
-    <title>En Corto</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730144000 -0500" stop="20260730151000 -0500">
-    <title>Deporte Total</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730151000 -0500" stop="20260730154500 -0500">
-    <title>Bob Esponja</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730154500 -0500" stop="20260730161500 -0500">
-    <title>Doraemon</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730161500 -0500" stop="20260730170000 -0500">
-    <title>Los Simpson</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730170000 -0500" stop="20260730173000 -0500">
-    <title>El Chapulín Colorado</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730173000 -0500" stop="20260730180000 -0500">
-    <title>El Chavo del Ocho</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730180000 -0500" stop="20260730184500 -0500">
-    <title>Papás por Siempre</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730184500 -0500" stop="20260730210000 -0500">
-    <title>Liga Pro ​Liga de Quito vs Delfín</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730210000 -0500" stop="20260730213000 -0500">
-    <title>24 Horas</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730213000 -0500" stop="20260730224500 -0500">
-    <title>De Lunes a Lunes</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730224500 -0500" stop="20260730234500 -0500">
-    <title>El After</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260730234500 -0500" stop="20260731001500 -0500">
-    <title>100 Días para enamorarnos</title>
-  </programme>
   <programme channel="teleamazonas.ec" start="20260731000000 -0500" stop="20260731013000 -0500">
     <title>CSI</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731013000 -0500" stop="20260731024500 -0500">
-    <title>24 Horas 2da Emisión</title>
+  <programme channel="teleamazonas.ec" start="20260731013000 -0500" stop="20260731023000 -0500">
+    <title>De Lunes a Lunes (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731024500 -0500" stop="20260731030000 -0500">
-    <title>24 Horas Nacional I (RP)</title>
+  <programme channel="teleamazonas.ec" start="20260731023000 -0500" stop="20260731030000 -0500">
+    <title>24 Horas (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731030000 -0500" stop="20260731031500 -0500">
-    <title>Entrevistas en 24 Horas (RP)</title>
+    <title>Entrevistas 24 Horas</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731031500 -0500" stop="20260731040000 -0500">
     <title>24 Horas (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731040000 -0500" stop="20260731043000 -0500">
-    <title>Yo Soy Tu Madre</title>
+    <title>Yo Soy tu Madre</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731043000 -0500" stop="20260731044500 -0500">
-    <title>La Familia Peluche</title>
+    <title>La Familia P. Luche</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731044500 -0500" stop="20260731050000 -0500">
-    <title>Derbez en Cuando</title>
+    <title>Derbez en cuando</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731050000 -0500" stop="20260731053000 -0500">
     <title>El Chapulín Colorado</title>
@@ -127,16 +34,16 @@
     <title>El Chavo del Ocho</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731055500 -0500" stop="20260731070000 -0500">
-    <title>24 Horas Quito I</title>
+    <title>24 Horas 1ra Emisión Local</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731070000 -0500" stop="20260731073000 -0500">
-    <title>24 Horas Edición Nacional</title>
+    <title>24 Horas Nacional I</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731073000 -0500" stop="20260731083000 -0500">
-    <title>Entrevistas en 24 Horas</title>
+  <programme channel="teleamazonas.ec" start="20260731073000 -0500" stop="20260731080000 -0500">
+    <title>Entrevistas 24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731083000 -0500" stop="20260731093000 -0500">
-    <title>24 Horas</title>
+  <programme channel="teleamazonas.ec" start="20260731080000 -0500" stop="20260731093000 -0500">
+    <title>24 Horas Segunda Emisión</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731093000 -0500" stop="20260731120000 -0500">
     <title>esTAmañana</title>
@@ -145,15 +52,15 @@
     <title>Por Amar Sin Ley</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731130000 -0500" stop="20260731135000 -0500">
-    <title>24 Horas</title>
+    <title>24 Horas Emisión Central</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731135000 -0500" stop="20260731143000 -0500">
     <title>24 Horas Comunidad</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731143000 -0500" stop="20260731144500 -0500">
+  <programme channel="teleamazonas.ec" start="20260731143000 -0500" stop="20260731144000 -0500">
     <title>En Corto</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731144500 -0500" stop="20260731151000 -0500">
+  <programme channel="teleamazonas.ec" start="20260731144000 -0500" stop="20260731151000 -0500">
     <title>Deporte Total</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260731151000 -0500" stop="20260731154500 -0500">
@@ -171,68 +78,65 @@
   <programme channel="teleamazonas.ec" start="20260731173000 -0500" stop="20260731180000 -0500">
     <title>El Chavo del Ocho</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731180000 -0500" stop="20260731190000 -0500">
-    <title>Papás Por Siempre</title>
+  <programme channel="teleamazonas.ec" start="20260731180000 -0500" stop="20260731184500 -0500">
+    <title>Papás por Siempre</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731190000 -0500" stop="20260731200000 -0500">
-    <title>100 Ecuatorianos Dicen</title>
+  <programme channel="teleamazonas.ec" start="20260731184500 -0500" stop="20260731210000 -0500">
+    <title>Liga Pro ​Liga de Quito vs Delfín</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731200000 -0500" stop="20260731210000 -0500">
-    <title>24 Horas Emisión Estelar</title>
+  <programme channel="teleamazonas.ec" start="20260731210000 -0500" stop="20260731213000 -0500">
+    <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731210000 -0500" stop="20260731223000 -0500">
-    <title>Nuevo Rico, Nuevo Pobre</title>
+  <programme channel="teleamazonas.ec" start="20260731213000 -0500" stop="20260731224500 -0500">
+    <title>De Lunes a Lunes</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731223000 -0500" stop="20260731230000 -0500">
+  <programme channel="teleamazonas.ec" start="20260731224500 -0500" stop="20260731234500 -0500">
     <title>El After</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260731230000 -0500" stop="20260731233000 -0500">
-    <title>100 Días Para Enamorarnos</title>
+  <programme channel="teleamazonas.ec" start="20260731234500 -0500" stop="20260801001500 -0500">
+    <title>100 Días para enamorarnos</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801000000 -0500" stop="20260801013000 -0500">
     <title>CSI</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801013000 -0500" stop="20260801021500 -0500">
+  <programme channel="teleamazonas.ec" start="20260801013000 -0500" stop="20260801024500 -0500">
     <title>24 Horas 2da Emisión</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801021500 -0500" stop="20260801031500 -0500">
-    <title>24 Horas 2da Emisión Local</title>
+  <programme channel="teleamazonas.ec" start="20260801024500 -0500" stop="20260801030000 -0500">
+    <title>24 Horas Nacional I (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801031500 -0500" stop="20260801033000 -0500">
-    <title>24 Horas</title>
+  <programme channel="teleamazonas.ec" start="20260801030000 -0500" stop="20260801031500 -0500">
+    <title>Entrevistas en 24 Horas (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801033000 -0500" stop="20260801034500 -0500">
-    <title>Entrevistas en 24 Horas</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260801034500 -0500" stop="20260801040000 -0500">
+  <programme channel="teleamazonas.ec" start="20260801031500 -0500" stop="20260801040000 -0500">
     <title>24 Horas (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801040000 -0500" stop="20260801043000 -0500">
-    <title>Yo soy tu Madre</title>
+    <title>Yo Soy Tu Madre</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801043000 -0500" stop="20260801044500 -0500">
     <title>La Familia Peluche</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801044500 -0500" stop="20260801050000 -0500">
-    <title>Derbez en cuando</title>
+    <title>Derbez en Cuando</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801050000 -0500" stop="20260801053000 -0500">
     <title>El Chapulín Colorado</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801053000 -0500" stop="20260801055500 -0500">
-    <title>El Chavo del 8</title>
+    <title>El Chavo del Ocho</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801055500 -0500" stop="20260801070000 -0500">
     <title>24 Horas Quito I</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801070000 -0500" stop="20260801073000 -0500">
-    <title>24 Horas Emisión Matinal</title>
+    <title>24 Horas Edición Nacional</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801073000 -0500" stop="20260801080000 -0500">
+  <programme channel="teleamazonas.ec" start="20260801073000 -0500" stop="20260801083000 -0500">
     <title>Entrevistas en 24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801080000 -0500" stop="20260801093000 -0500">
-    <title>24 Horas Quito II</title>
+  <programme channel="teleamazonas.ec" start="20260801083000 -0500" stop="20260801093000 -0500">
+    <title>24 Horas</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801093000 -0500" stop="20260801120000 -0500">
     <title>esTAmañana</title>
@@ -241,7 +145,7 @@
     <title>Por Amar Sin Ley</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801130000 -0500" stop="20260801135000 -0500">
-    <title>24 Horas Emisión Central</title>
+    <title>24 Horas</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801135000 -0500" stop="20260801143000 -0500">
     <title>24 Horas Comunidad</title>
@@ -259,7 +163,7 @@
     <title>Doraemon</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801161500 -0500" stop="20260801170000 -0500">
-    <title>Los SImpson</title>
+    <title>Los Simpson</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260801170000 -0500" stop="20260801173000 -0500">
     <title>El Chapulín Colorado</title>
@@ -267,37 +171,40 @@
   <programme channel="teleamazonas.ec" start="20260801173000 -0500" stop="20260801180000 -0500">
     <title>El Chavo del Ocho</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801180000 -0500" stop="20260801184500 -0500">
-    <title>Papás por Siempre</title>
+  <programme channel="teleamazonas.ec" start="20260801180000 -0500" stop="20260801190000 -0500">
+    <title>Papás Por Siempre</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801184500 -0500" stop="20260801210000 -0500">
-    <title>Liga Pro Liga de Portoviejo vs Barcelona</title>
+  <programme channel="teleamazonas.ec" start="20260801190000 -0500" stop="20260801200000 -0500">
+    <title>100 Ecuatorianos Dicen</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801210000 -0500" stop="20260801214500 -0500">
+  <programme channel="teleamazonas.ec" start="20260801200000 -0500" stop="20260801210000 -0500">
     <title>24 Horas Emisión Estelar</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801214500 -0500" stop="20260801230000 -0500">
-    <title>Nuevo Rico, Nuevo Pobre (2025)</title>
+  <programme channel="teleamazonas.ec" start="20260801210000 -0500" stop="20260801223000 -0500">
+    <title>Nuevo Rico, Nuevo Pobre</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801230000 -0500" stop="20260801233000 -0500">
+  <programme channel="teleamazonas.ec" start="20260801223000 -0500" stop="20260801230000 -0500">
     <title>El After</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260801233000 -0500" stop="20260802000000 -0500">
-    <title>100 Días para Enamorarnos</title>
+  <programme channel="teleamazonas.ec" start="20260801230000 -0500" stop="20260801233000 -0500">
+    <title>100 Días Para Enamorarnos</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802000000 -0500" stop="20260802013000 -0500">
-    <title>CSI Miami</title>
+    <title>CSI</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260802013000 -0500" stop="20260802024500 -0500">
-    <title>24 Horas 2da Emisión (RP)</title>
+  <programme channel="teleamazonas.ec" start="20260802013000 -0500" stop="20260802021500 -0500">
+    <title>24 Horas 2da Emisión</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260802024500 -0500" stop="20260802030000 -0500">
-    <title>24 Horas (RP)</title>
+  <programme channel="teleamazonas.ec" start="20260802021500 -0500" stop="20260802031500 -0500">
+    <title>24 Horas 2da Emisión Local</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260802030000 -0500" stop="20260802031500 -0500">
-    <title>Entrevistas 24 Horas (RP)</title>
+  <programme channel="teleamazonas.ec" start="20260802031500 -0500" stop="20260802033000 -0500">
+    <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260802031500 -0500" stop="20260802040000 -0500">
+  <programme channel="teleamazonas.ec" start="20260802033000 -0500" stop="20260802034500 -0500">
+    <title>Entrevistas en 24 Horas</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260802034500 -0500" stop="20260802040000 -0500">
     <title>24 Horas (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802040000 -0500" stop="20260802043000 -0500">
@@ -307,25 +214,25 @@
     <title>La Familia Peluche</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802044500 -0500" stop="20260802050000 -0500">
-    <title>Derbez en Cuando</title>
+    <title>Derbez en cuando</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802050000 -0500" stop="20260802053000 -0500">
     <title>El Chapulín Colorado</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802053000 -0500" stop="20260802055500 -0500">
-    <title>El Chavo del Ocho</title>
+    <title>El Chavo del 8</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802055500 -0500" stop="20260802070000 -0500">
-    <title>24 Horas 1ra Emisión Local</title>
+    <title>24 Horas Quito I</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802070000 -0500" stop="20260802073000 -0500">
-    <title>24 Horas Nacional I</title>
+    <title>24 Horas Emisión Matinal</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802073000 -0500" stop="20260802080000 -0500">
     <title>Entrevistas en 24 Horas</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802080000 -0500" stop="20260802093000 -0500">
-    <title>24 Horas 2da Emisión Local</title>
+    <title>24 Horas Quito II</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802093000 -0500" stop="20260802120000 -0500">
     <title>esTAmañana</title>
@@ -352,7 +259,7 @@
     <title>Doraemon</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802161500 -0500" stop="20260802170000 -0500">
-    <title>Los Simpson</title>
+    <title>Los SImpson</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802170000 -0500" stop="20260802173000 -0500">
     <title>El Chapulín Colorado</title>
@@ -360,23 +267,23 @@
   <programme channel="teleamazonas.ec" start="20260802173000 -0500" stop="20260802180000 -0500">
     <title>El Chavo del Ocho</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260802180000 -0500" stop="20260802190000 -0500">
+  <programme channel="teleamazonas.ec" start="20260802180000 -0500" stop="20260802184500 -0500">
     <title>Papás por Siempre</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260802190000 -0500" stop="20260802200000 -0500">
-    <title>100 Ecuatorianos Dicen</title>
+  <programme channel="teleamazonas.ec" start="20260802184500 -0500" stop="20260802210000 -0500">
+    <title>Liga Pro Liga de Portoviejo vs Barcelona</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260802200000 -0500" stop="20260802210000 -0500">
+  <programme channel="teleamazonas.ec" start="20260802210000 -0500" stop="20260802214500 -0500">
     <title>24 Horas Emisión Estelar</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260802210000 -0500" stop="20260802223000 -0500">
-    <title>Nuevo Rico, Nuevo Pobre 2025</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260802223000 -0500" stop="20260802230000 -0500">
-    <title>Enchufe TV</title>
+  <programme channel="teleamazonas.ec" start="20260802214500 -0500" stop="20260802230000 -0500">
+    <title>Nuevo Rico, Nuevo Pobre (2025)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260802230000 -0500" stop="20260802233000 -0500">
-    <title>100 Días Para Enamorarnos</title>
+    <title>El After</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260802233000 -0500" stop="20260803000000 -0500">
+    <title>100 Días para Enamorarnos</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260803000000 -0500" stop="20260803013000 -0500">
     <title>CSI Miami</title>
@@ -394,10 +301,13 @@
     <title>24 Horas (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260803040000 -0500" stop="20260803043000 -0500">
-    <title>Yo Soy Tu Madre</title>
+    <title>Yo soy tu Madre</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260803043000 -0500" stop="20260803050000 -0500">
-    <title>Geeks</title>
+  <programme channel="teleamazonas.ec" start="20260803043000 -0500" stop="20260803044500 -0500">
+    <title>La Familia Peluche</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260803044500 -0500" stop="20260803050000 -0500">
+    <title>Derbez en Cuando</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260803050000 -0500" stop="20260803053000 -0500">
     <title>El Chapulín Colorado</title>
@@ -429,10 +339,10 @@
   <programme channel="teleamazonas.ec" start="20260803135000 -0500" stop="20260803143000 -0500">
     <title>24 Horas Comunidad</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260803143000 -0500" stop="20260803144000 -0500">
+  <programme channel="teleamazonas.ec" start="20260803143000 -0500" stop="20260803144500 -0500">
     <title>En Corto</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260803144000 -0500" stop="20260803151000 -0500">
+  <programme channel="teleamazonas.ec" start="20260803144500 -0500" stop="20260803151000 -0500">
     <title>Deporte Total</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260803151000 -0500" stop="20260803154500 -0500">
@@ -466,136 +376,142 @@
     <title>Enchufe TV</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260803230000 -0500" stop="20260803233000 -0500">
-    <title>100 Días para Enamorarnos</title>
+    <title>100 Días Para Enamorarnos</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804000000 -0500" stop="20260804011500 -0500">
-    <title>La Gran Aventura del Cine: Mientras Somos Jóvenes</title>
+  <programme channel="teleamazonas.ec" start="20260804000000 -0500" stop="20260804013000 -0500">
+    <title>CSI Miami</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804011500 -0500" stop="20260804030000 -0500">
-    <title>Aida</title>
+  <programme channel="teleamazonas.ec" start="20260804013000 -0500" stop="20260804024500 -0500">
+    <title>24 Horas 2da Emisión (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804030000 -0500" stop="20260804034500 -0500">
+  <programme channel="teleamazonas.ec" start="20260804024500 -0500" stop="20260804030000 -0500">
     <title>24 Horas (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804034500 -0500" stop="20260804043000 -0500">
-    <title>América Vive (RP)</title>
+  <programme channel="teleamazonas.ec" start="20260804030000 -0500" stop="20260804031500 -0500">
+    <title>Entrevistas 24 Horas (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260804031500 -0500" stop="20260804040000 -0500">
+    <title>24 Horas (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260804040000 -0500" stop="20260804043000 -0500">
+    <title>Yo Soy Tu Madre</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260804043000 -0500" stop="20260804050000 -0500">
     <title>Geeks</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804050000 -0500" stop="20260804060000 -0500">
-    <title>Tres Patines</title>
+  <programme channel="teleamazonas.ec" start="20260804050000 -0500" stop="20260804053000 -0500">
+    <title>El Chapulín Colorado</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804060000 -0500" stop="20260804063000 -0500">
-    <title>Geeks</title>
+  <programme channel="teleamazonas.ec" start="20260804053000 -0500" stop="20260804055500 -0500">
+    <title>El Chavo del Ocho</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804063000 -0500" stop="20260804070000 -0500">
-    <title>Game Shakers</title>
+  <programme channel="teleamazonas.ec" start="20260804055500 -0500" stop="20260804070000 -0500">
+    <title>24 Horas 1ra Emisión Local</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260804070000 -0500" stop="20260804073000 -0500">
-    <title>Victorious</title>
+    <title>24 Horas Nacional I</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260804073000 -0500" stop="20260804080000 -0500">
-    <title>¡Oye, Arnold!</title>
+    <title>Entrevistas en 24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804080000 -0500" stop="20260804100000 -0500">
-    <title>TVentas</title>
+  <programme channel="teleamazonas.ec" start="20260804080000 -0500" stop="20260804093000 -0500">
+    <title>24 Horas 2da Emisión Local</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804100000 -0500" stop="20260804110000 -0500">
-    <title>Drake y Josh</title>
+  <programme channel="teleamazonas.ec" start="20260804093000 -0500" stop="20260804120000 -0500">
+    <title>esTAmañana</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804110000 -0500" stop="20260804114500 -0500">
-    <title>Full House</title>
+  <programme channel="teleamazonas.ec" start="20260804120000 -0500" stop="20260804130000 -0500">
+    <title>Por Amar Sin Ley</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804114500 -0500" stop="20260804121500 -0500">
-    <title>Fuller House</title>
+  <programme channel="teleamazonas.ec" start="20260804130000 -0500" stop="20260804135000 -0500">
+    <title>24 Horas Emisión Central</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804121500 -0500" stop="20260804130000 -0500">
-    <title>Día a Día (RP)</title>
+  <programme channel="teleamazonas.ec" start="20260804135000 -0500" stop="20260804143000 -0500">
+    <title>24 Horas Comunidad</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804130000 -0500" stop="20260804140000 -0500">
-    <title>24 Horas</title>
+  <programme channel="teleamazonas.ec" start="20260804143000 -0500" stop="20260804144000 -0500">
+    <title>En Corto</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804140000 -0500" stop="20260804150000 -0500">
-    <title>Documentales de Animales</title>
+  <programme channel="teleamazonas.ec" start="20260804144000 -0500" stop="20260804151000 -0500">
+    <title>Deporte Total</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804150000 -0500" stop="20260804153000 -0500">
-    <title>Malcom</title>
+  <programme channel="teleamazonas.ec" start="20260804151000 -0500" stop="20260804154500 -0500">
+    <title>Bob Esponja</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804153000 -0500" stop="20260804163000 -0500">
+  <programme channel="teleamazonas.ec" start="20260804154500 -0500" stop="20260804161500 -0500">
+    <title>Doraemon</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260804161500 -0500" stop="20260804170000 -0500">
     <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804163000 -0500" stop="20260804180000 -0500">
-    <title>Sábados de Cine I ​</title>
+  <programme channel="teleamazonas.ec" start="20260804170000 -0500" stop="20260804173000 -0500">
+    <title>El Chapulín Colorado</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804180000 -0500" stop="20260804200000 -0500">
-    <title>Sábado de Cine II</title>
+  <programme channel="teleamazonas.ec" start="20260804173000 -0500" stop="20260804180000 -0500">
+    <title>El Chavo del Ocho</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260804180000 -0500" stop="20260804190000 -0500">
+    <title>Papás por Siempre</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260804190000 -0500" stop="20260804200000 -0500">
+    <title>100 Ecuatorianos Dicen</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260804200000 -0500" stop="20260804210000 -0500">
-    <title>24 Horas</title>
+    <title>24 Horas Emisión Estelar</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804210000 -0500" stop="20260804221500 -0500">
-    <title>De Año en Año (RP)</title>
+  <programme channel="teleamazonas.ec" start="20260804210000 -0500" stop="20260804223000 -0500">
+    <title>Nuevo Rico, Nuevo Pobre 2025</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804221500 -0500" stop="20260804231500 -0500">
-    <title>América Vive</title>
+  <programme channel="teleamazonas.ec" start="20260804223000 -0500" stop="20260804230000 -0500">
+    <title>Enchufe TV</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260804231500 -0500" stop="20260804234500 -0500">
-    <title>Sinfonía de Motores</title>
+  <programme channel="teleamazonas.ec" start="20260804230000 -0500" stop="20260804233000 -0500">
+    <title>100 Días para Enamorarnos</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805000000 -0500" stop="20260805004500 -0500">
-    <title>La Ley y el Orden</title>
+  <programme channel="teleamazonas.ec" start="20260805000000 -0500" stop="20260805011500 -0500">
+    <title>La Gran Aventura del Cine: Mientras Somos Jóvenes</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805004500 -0500" stop="20260805013000 -0500">
+  <programme channel="teleamazonas.ec" start="20260805011500 -0500" stop="20260805030000 -0500">
+    <title>Aida</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260805030000 -0500" stop="20260805034500 -0500">
     <title>24 Horas (RP)</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805013000 -0500" stop="20260805021500 -0500">
-    <title>El Buscador (RP)</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260805021500 -0500" stop="20260805030000 -0500">
-    <title>Día a Día (RP)</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260805030000 -0500" stop="20260805033000 -0500">
-    <title>Deporte Total (RP)</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260805033000 -0500" stop="20260805040000 -0500">
-    <title>En Corto (RP)</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260805040000 -0500" stop="20260805043000 -0500">
-    <title>La Familia Peluche</title>
+  <programme channel="teleamazonas.ec" start="20260805034500 -0500" stop="20260805043000 -0500">
+    <title>América Vive (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260805043000 -0500" stop="20260805050000 -0500">
-    <title>Derbez en cuando</title>
+    <title>Geeks</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260805050000 -0500" stop="20260805060000 -0500">
     <title>Tres Patines</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805060000 -0500" stop="20260805064500 -0500">
-    <title>La Cocina del Chef</title>
+  <programme channel="teleamazonas.ec" start="20260805060000 -0500" stop="20260805063000 -0500">
+    <title>Geeks</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805064500 -0500" stop="20260805072500 -0500">
-    <title>Sindonía de Motores (RP)</title>
+  <programme channel="teleamazonas.ec" start="20260805063000 -0500" stop="20260805070000 -0500">
+    <title>Game Shakers</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805072500 -0500" stop="20260805080000 -0500">
-    <title>Misa Dominical</title>
+  <programme channel="teleamazonas.ec" start="20260805070000 -0500" stop="20260805073000 -0500">
+    <title>Victorious</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260805073000 -0500" stop="20260805080000 -0500">
+    <title>¡Oye, Arnold!</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260805080000 -0500" stop="20260805100000 -0500">
-    <title>TVENTAS</title>
+    <title>TVentas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805100000 -0500" stop="20260805103000 -0500">
-    <title>La Familia Peluche</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20260805103000 -0500" stop="20260805110000 -0500">
-    <title>Sinfonía de Motores (RP)</title>
+  <programme channel="teleamazonas.ec" start="20260805100000 -0500" stop="20260805110000 -0500">
+    <title>Drake y Josh</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260805110000 -0500" stop="20260805114500 -0500">
-    <title>El Buscador (RP)</title>
+    <title>Full House</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260805114500 -0500" stop="20260805121500 -0500">
-    <title>El Chapulín Colorado</title>
+    <title>Fuller House</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260805121500 -0500" stop="20260805130000 -0500">
-    <title>El Chavo</title>
+    <title>Día a Día (RP)</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260805130000 -0500" stop="20260805140000 -0500">
     <title>24 Horas</title>
@@ -606,28 +522,112 @@
   <programme channel="teleamazonas.ec" start="20260805150000 -0500" stop="20260805153000 -0500">
     <title>Malcom</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805153000 -0500" stop="20260805161500 -0500">
+  <programme channel="teleamazonas.ec" start="20260805153000 -0500" stop="20260805163000 -0500">
     <title>Los Simpson</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805161500 -0500" stop="20260805174500 -0500">
-    <title>Cine del Domingo</title>
+  <programme channel="teleamazonas.ec" start="20260805163000 -0500" stop="20260805180000 -0500">
+    <title>Sábados de Cine I ​</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805174500 -0500" stop="20260805200000 -0500">
-    <title>Cine en Familia</title>
+  <programme channel="teleamazonas.ec" start="20260805180000 -0500" stop="20260805200000 -0500">
+    <title>Sábado de Cine II</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20260805200000 -0500" stop="20260805210000 -0500">
     <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805210000 -0500" stop="20260805220000 -0500">
+  <programme channel="teleamazonas.ec" start="20260805210000 -0500" stop="20260805221500 -0500">
+    <title>De Año en Año (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260805221500 -0500" stop="20260805231500 -0500">
+    <title>América Vive</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260805231500 -0500" stop="20260805234500 -0500">
+    <title>Sinfonía de Motores</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806000000 -0500" stop="20260806004500 -0500">
+    <title>La Ley y el Orden</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806004500 -0500" stop="20260806013000 -0500">
+    <title>24 Horas (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806013000 -0500" stop="20260806021500 -0500">
+    <title>El Buscador (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806021500 -0500" stop="20260806030000 -0500">
+    <title>Día a Día (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806030000 -0500" stop="20260806033000 -0500">
+    <title>Deporte Total (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806033000 -0500" stop="20260806040000 -0500">
+    <title>En Corto (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806040000 -0500" stop="20260806043000 -0500">
+    <title>La Familia Peluche</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806043000 -0500" stop="20260806050000 -0500">
+    <title>Derbez en cuando</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806050000 -0500" stop="20260806060000 -0500">
+    <title>Tres Patines</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806060000 -0500" stop="20260806064500 -0500">
+    <title>La Cocina del Chef</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806064500 -0500" stop="20260806072500 -0500">
+    <title>Sindonía de Motores (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806072500 -0500" stop="20260806080000 -0500">
+    <title>Misa Dominical</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806080000 -0500" stop="20260806100000 -0500">
+    <title>TVENTAS</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806100000 -0500" stop="20260806103000 -0500">
+    <title>La Familia Peluche</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806103000 -0500" stop="20260806110000 -0500">
+    <title>Sinfonía de Motores (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806110000 -0500" stop="20260806114500 -0500">
+    <title>El Buscador (RP)</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806114500 -0500" stop="20260806121500 -0500">
+    <title>El Chapulín Colorado</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806121500 -0500" stop="20260806130000 -0500">
+    <title>El Chavo</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806130000 -0500" stop="20260806140000 -0500">
+    <title>24 Horas</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806140000 -0500" stop="20260806150000 -0500">
+    <title>Documentales de Animales</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806150000 -0500" stop="20260806153000 -0500">
+    <title>Malcom</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806153000 -0500" stop="20260806161500 -0500">
+    <title>Los Simpson</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806161500 -0500" stop="20260806174500 -0500">
+    <title>Cine del Domingo</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806174500 -0500" stop="20260806200000 -0500">
+    <title>Cine en Familia</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806200000 -0500" stop="20260806210000 -0500">
+    <title>24 Horas</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20260806210000 -0500" stop="20260806220000 -0500">
     <title>Día a Día</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805220000 -0500" stop="20260805230000 -0500">
+  <programme channel="teleamazonas.ec" start="20260806220000 -0500" stop="20260806230000 -0500">
     <title>El Buscador</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805230000 -0500" stop="20260805233000 -0500">
+  <programme channel="teleamazonas.ec" start="20260806230000 -0500" stop="20260806233000 -0500">
     <title>Deporte Total</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20260805233000 -0500" stop="20260806000000 -0500">
+  <programme channel="teleamazonas.ec" start="20260806233000 -0500" stop="20260807000000 -0500">
     <title>En Corto</title>
   </programme>
 </tv>
