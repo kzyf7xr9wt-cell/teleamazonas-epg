@@ -123,8 +123,8 @@ def make_programmes(days, articles, today):
 def main():
     response = requests.get(URL, headers=HEADERS, timeout=35)
     response.raise_for_status()
-    soup = BeautifulSoup(response.text, 'lxml')
-    days, articles = find_schedule(soup)
+    soup = BeautifulSoup(response.text, 'html.parser')
+days, articles = find_schedule(soup)
     today = datetime.now(EC_TZ).date()
     programmes = make_programmes(days, articles, today)
 
