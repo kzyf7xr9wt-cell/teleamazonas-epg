@@ -1,18 +1,11 @@
 
 #!/usr/bin/env python3
-# Teleamazonas EPG Scraper
-# Output: teleamazonas.xml
-# Requirements: requests, beautifulsoup4
-#
-# Automatically builds a weekly XMLTV guide.
-# Ecuador timezone: UTC-5.
-
+"""GatoTV Teleamazonas -> XMLTV. Dependencies: requests, beautifulsoup4."""
 from __future__ import annotations
 
 import os
 import re
 import tempfile
-import unicodedata
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -20,362 +13,228 @@ from xml.etree import ElementTree as ET
 import requests
 from bs4 import BeautifulSoup
 
-# CONFIGURATION
-
-URL = "https://www.teleamazonas.com/programacion/"
-OUTPUT = Path("teleamazonas.xml")
-
-CHANNEL_ID = "teleamazonas.ec"
-CHANNEL_NAME = "Teleamazonas"
-
-EC_TZ = timezone(timedelta(hours=-5))
-
-WEEKDAYS = {
-    "lunes": 0,
-    "martes": 1,
-    "miercoles": 2,
-    "jueves": 3,
-    "viernes": 4,
-    "sabado": 5,
-    "domingo": 6,
-}
-
+BASE = 'https://www.gatotv.com/canal/teleamazonas'
+OUTPUT = Path('teleamazonas.xml')
+CHANNEL = 'teleamazonas.ec'
+ECUADOR = timezone(timedelta(hours=-5))
 HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 Chrome/131.0 Safari/537.36"
+    'User-Agent': (
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+        'AppleWebKit/537.36 Chrome/131.0 Safari/537.36'
     )
 }
 
-
-def normalize(value):
-    value = unicodedata.normalize("NFKD", value.lower())
-    return "".join(
-        c for c in value
-        if not unicodedata.combining(c)
-    ).strip()
+TIME = r'(?:1[0-2]|0?[1-9]):[0-5][0-9]\s*[AP]\.?M\.?'
+ROW = re.compile(
+    r'^\s*(' + TIME + r')\s+(' + TIME + r')\s+(.+?)\s*$',
+    re.I
+)
 
 
-def day_index(text):
-    for token in re.findall(r"[a-z]+", normalize(text)):
-        if token in WEEKDAYS:
-            return WEEKDAYS[token]
-    return None
+def parse_time(s):
+    s = re.sub(r'\.', '', s).upper().replace(' ', '')
+    return datetime.strptime(s, '%I:%M%p').time()
 
 
-def time_value(text):
-    text = " ".join(text.split()).upper()
-
-    match = re.search(
-        r"\b(\d{1,2}):(\d{2})\s*(AM|PM)?\b",
-        text
-    )
-
-    if not match:
-        return None
-
-    hour = int(match[1])
-    minute = int(match[2])
-    suffix = match[3]
-
-    if suffix:
-        if not 1 <= hour <= 12:
-            return None
-
-        hour = hour % 12 + (
-            12 if suffix == "PM" else 0
-        )
-
-    if hour > 23 or minute > 59:
-        return None
-
-    return hour, minute
-
-
-def extract(article, day):
+def extract_rows(soup):
     rows = []
 
-    for item in article.select(
-        ".c-list-tv-simple__txt"
-    ):
-        span = item.find("span")
-        title = item.find("p")
+    for tr in soup.select('tr'):
+        cells = tr.find_all(['td', 'th'], recursive=False)
 
-        if not span or not title:
+        if len(cells) < 3:
             continue
 
-        hm = time_value(
-            span.get_text(" ", strip=True)
-        )
+        first = cells[0].get_text(' ', strip=True)
+        second = cells[1].get_text(' ', strip=True)
 
-        name = " ".join(
-            title.get_text(
-                " ", strip=True
-            ).split()
-        )
-
-        if hm and name:
-            dt = datetime(
-                day.year,
-                day.month,
-                day.day,
-                *hm,
-                tzinfo=EC_TZ
-            )
-
-            rows.append((dt, name))
-
-    rows.sort(key=lambda p: p[0])
-
-    unique = {}
-
-    for dt, name in rows:
-        unique.setdefault(dt, name)
-
-    return sorted(unique.items())
-
-
-def find_schedule(soup):
-    groups = []
-
-    for tablist in soup.select(
-        "ul.c-list-tv__tabs"
-    ):
-        tabs = tablist.select(
-            "li.c-list-tv__tabs-item"
-        )
-
-        days = [
-            day_index(
-                t.get_text(" ", strip=True)
-            )
-            for t in tabs
-        ]
-
-        if len(days) < 7:
+        if not re.fullmatch(TIME, first, re.I):
+            continue
+        if not re.fullmatch(TIME, second, re.I):
             continue
 
-        if len(set(
-            x for x in days
-            if x is not None
-        )) != 7:
-            continue
+        title = cells[2].get_text(' ', strip=True)
+        link = cells[2].find('a')
 
-        parent = tablist.parent
+        if link and link.get_text(' ', strip=True):
+            title = link.get_text(' ', strip=True)
 
-        wrapper = (
-            parent.select_one(
-                ".c-list-tv__tabs__sections"
-            )
-            if parent else None
+        if title:
+            rows.append((first, second, title))
+
+    if rows:
+        return rows
+
+    text = soup.get_text('\n', strip=True)
+    lines = [
+        re.sub(r'\s+', ' ', x).strip()
+        for x in text.splitlines()
+    ]
+
+    for line in lines:
+        match = ROW.match(line)
+        if match:
+            rows.append(match.groups())
+
+    if rows:
+        return rows
+
+    for i in range(len(lines) - 2):
+        if (
+            re.fullmatch(TIME, lines[i], re.I)
+            and re.fullmatch(TIME, lines[i + 1], re.I)
+        ):
+            title = lines[i + 2]
+            if title and not re.fullmatch(TIME, title, re.I):
+                rows.append((lines[i], lines[i + 1], title))
+
+    return rows
+
+
+def fetch_day(session, date):
+    url = f'{BASE}/{date.isoformat()}'
+    response = session.get(url, timeout=35)
+    response.raise_for_status()
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    if date.isoformat() not in response.url:
+        raise ValueError(
+            f'Date page redirected: {url} -> {response.url}'
         )
 
-        if wrapper is None:
-            grandparent = (
-                parent.parent
-                if parent else None
-            )
+    rows = extract_rows(soup)
 
-            wrapper = (
-                grandparent.select_one(
-                    ".c-list-tv__tabs__sections"
-                )
-                if grandparent else None
-            )
-
-        if not wrapper:
-            continue
-
-        articles = [
-            a for a in wrapper.select("article")
-            if a.select_one(
-                ".c-list-tv-simple__txt"
-            )
-        ]
-
-        if len(articles) != len(tabs):
-            continue
-
-        groups.append((days, articles))
-
-    if not groups:
-        raise RuntimeError(
-            "Could not match seven weekday tabs "
-            "with seven schedule panels. "
-            "Website structure may have changed."
+    if len(rows) < 10:
+        raise ValueError(
+            f'Only {len(rows)} programs found for {date}: {url}'
         )
-
-    return groups[0]
-
-
-def make_programmes(days, articles, today):
-    monday = today - timedelta(
-        days=today.weekday()
-    )
-
-    daily = {}
-
-    for weekday, article in zip(
-        days, articles
-    ):
-        date = monday + timedelta(
-            days=weekday
-        )
-
-        points = extract(article, date)
-
-        if len(points) < 5:
-            raise RuntimeError(
-                f"Only {len(points)} shows "
-                f"found for {date}."
-            )
-
-        daily[weekday] = points
-
-    if set(daily) != set(range(7)):
-        raise RuntimeError(
-            "Not all seven weekdays were found."
-        )
-
-    points = sorted(
-        (
-            p
-            for rows in daily.values()
-            for p in rows
-        ),
-        key=lambda p: p[0]
-    )
 
     programmes = []
 
-    for i, (start, title) in enumerate(
-        points
-    ):
-        if i + 1 < len(points):
-            next_start = points[i + 1][0]
-        else:
-            next_start = (
-                start + timedelta(minutes=30)
-            )
-
-        stop = min(
-            next_start,
-            start + timedelta(hours=8)
+    for row_number, (start_text, stop_text, title) in enumerate(rows):
+        start = datetime.combine(
+            date, parse_time(start_text), ECUADOR
+        )
+        stop = datetime.combine(
+            date, parse_time(stop_text), ECUADOR
         )
 
-        if stop > start:
-            programmes.append(
-                (start, stop, title)
-            )
+        if stop <= start:
+            if row_number == 0 and start.hour >= 18:
+                continue
+            if start.hour >= 18:
+                stop += timedelta(days=1)
+            else:
+                continue
 
-    if len(programmes) < 70:
-        raise RuntimeError(
-            "Incomplete schedule. "
-            "Existing XML will not be overwritten."
+        title = re.sub(r'\s+', ' ', title).strip()
+
+        if title and stop > start:
+            programmes.append((start, stop, title))
+
+    if len(programmes) < 10:
+        raise ValueError(
+            f'Only {len(programmes)} valid programs for {date}'
         )
 
     return programmes
 
 
 def main():
-    print("Downloading Teleamazonas schedule...")
+    today = datetime.now(ECUADOR).date()
+    session = requests.Session()
+    session.headers.update(HEADERS)
 
-    response = requests.get(
-        URL,
-        headers=HEADERS,
-        timeout=35
-    )
+    all_items = []
 
-    response.raise_for_status()
+    for offset in range(7):
+        date = today + timedelta(days=offset)
 
-    # Built-in parser. No lxml required.
-    soup = BeautifulSoup(
-        response.text,
-        "html.parser"
-    )
+        try:
+            items = fetch_day(session, date)
+        except (requests.RequestException, ValueError) as exc:
+            if offset == 0:
+                raise RuntimeError(
+                    f'Current-day guide unavailable: {exc}'
+                ) from exc
 
-    days, articles = find_schedule(soup)
+            print(f'Future day unavailable ({date}): {exc}')
+            break
 
-    today = datetime.now(EC_TZ).date()
+        print(f'{date}: {len(items)} programmes')
+        all_items.extend(items)
 
-    programmes = make_programmes(
-        days,
-        articles,
-        today
-    )
+    if len(all_items) < 10:
+        raise RuntimeError(
+            'Insufficient data; existing XML left untouched'
+        )
 
-    tv = ET.Element(
-        "tv",
-        {
-            "generator-info-name":
-            "teleamazonas-scraper"
-        }
+    unique = {}
+
+    for start, stop, title in all_items:
+        unique.setdefault(start, (stop, title))
+
+    starts = sorted(unique)
+    cleaned = []
+
+    for i, start in enumerate(starts):
+        stop, title = unique[start]
+
+        if i + 1 < len(starts):
+            stop = min(stop, starts[i + 1])
+
+        if stop > start:
+            cleaned.append((start, stop, title))
+
+    root = ET.Element(
+        'tv',
+        {'generator-info-name': 'gatotv-teleamazonas-scraper'}
     )
 
     channel = ET.SubElement(
-        tv,
-        "channel",
-        {"id": CHANNEL_ID}
+        root, 'channel', {'id': CHANNEL}
     )
 
     ET.SubElement(
-        channel,
-        "display-name"
-    ).text = CHANNEL_NAME
+        channel, 'display-name'
+    ).text = 'Teleamazonas'
 
-    for start, stop, title in programmes:
-        pr = ET.SubElement(
-            tv,
-            "programme",
+    for start, stop, title in cleaned:
+        programme = ET.SubElement(
+            root,
+            'programme',
             {
-                "channel": CHANNEL_ID,
-                "start": start.strftime(
-                    "%Y%m%d%H%M%S %z"
-                ),
-                "stop": stop.strftime(
-                    "%Y%m%d%H%M%S %z"
-                )
+                'channel': CHANNEL,
+                'start': start.strftime('%Y%m%d%H%M%S %z'),
+                'stop': stop.strftime('%Y%m%d%H%M%S %z')
             }
         )
 
-        ET.SubElement(
-            pr,
-            "title"
-        ).text = title
+        ET.SubElement(programme, 'title').text = title
 
-    ET.indent(tv, space="  ")
+    ET.indent(root, space='  ')
 
-    payload = ET.tostring(
-        tv,
-        encoding="utf-8",
+    data = ET.tostring(
+        root,
+        encoding='utf-8',
         xml_declaration=True
-    )
+    ) + b'\n'
 
     with tempfile.NamedTemporaryFile(
-        mode="wb",
+        mode='wb',
         dir=OUTPUT.parent,
         delete=False
     ) as temp:
-        temp.write(payload + b"\n")
-        temp_path = temp.name
+        temp.write(data)
+        tmp = temp.name
 
-    os.replace(
-        temp_path,
-        OUTPUT
-    )
+    os.replace(tmp, OUTPUT)
 
     print(
-        f"SUCCESS: Wrote {OUTPUT} "
-        f"with {len(programmes)} programmes."
-    )
-
-    print(
-        "Week starting:",
-        today - timedelta(
-            days=today.weekday()
-        )
+        f'SUCCESS: {len(cleaned)} programmes written to {OUTPUT}'
     )
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
