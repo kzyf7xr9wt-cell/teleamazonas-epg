@@ -3,57 +3,6 @@
   <channel id="teleamazonas.ec">
     <display-name>Teleamazonas</display-name>
   </channel>
-  <programme channel="teleamazonas.ec" start="20261114000000 -0500" stop="20261114011500 -0500">
-    <title>Escape Perfecto</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114020000 -0500" stop="20261114021500 -0500">
-    <title>Entrevistas en 24 horas</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114021500 -0500" stop="20261114024500 -0500">
-    <title>Yo soy tu madre</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114024500 -0500" stop="20261114033000 -0500">
-    <title>24 Horas</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114033000 -0500" stop="20261114040000 -0500">
-    <title>Geeks</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114040000 -0500" stop="20261114050000 -0500">
-    <title>Tres Patines</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114050000 -0500" stop="20261114053000 -0500">
-    <title>Game Shakers</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114060000 -0500" stop="20261114070000 -0500">
-    <title>Drake &amp; Josh</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114070000 -0500" stop="20261114100000 -0500">
-    <title>Tventas</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114120000 -0500" stop="20261114133000 -0500">
-    <title>Largometraje</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114133000 -0500" stop="20261114153000 -0500">
-    <title>Cine</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114153000 -0500" stop="20261114170000 -0500">
-    <title>Cine</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114170000 -0500" stop="20261114190000 -0500">
-    <title>Cine</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114190000 -0500" stop="20261114200500 -0500">
-    <title>Teleamazonas Noticias Central</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114200500 -0500" stop="20261114210500 -0500">
-    <title>El buscador</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114210500 -0500" stop="20261114220000 -0500">
-    <title>América Vive</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261114220000 -0500" stop="20261115001500 -0500">
-    <title>La gran aventura del cine</title>
-  </programme>
   <programme channel="teleamazonas.ec" start="20261115001500 -0500" stop="20261115011500 -0500">
     <title>Aída</title>
   </programme>
