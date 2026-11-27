@@ -3,124 +3,148 @@
   <channel id="teleamazonas.ec">
     <display-name>Teleamazonas</display-name>
   </channel>
-  <programme channel="teleamazonas.ec" start="20261126000000 -0500" stop="20261126004500 -0500">
-    <title>Yo soy tu madre</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126020000 -0500" stop="20261126024500 -0500">
-    <title>24 horas - 3ra emisión</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126024500 -0500" stop="20261126063000 -0500">
-    <title>Teleamazonas Noticias Matinal</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126063000 -0500" stop="20261126090000 -0500">
-    <title>EsTAmañana</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126090000 -0500" stop="20261126100000 -0500">
-    <title>Como dice el dicho</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126100000 -0500" stop="20261126120000 -0500">
-    <title>Teleamazonas Noticias Central</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126120000 -0500" stop="20261126123000 -0500">
-    <title>Deporte Total</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126123000 -0500" stop="20261126143000 -0500">
-    <title>Mi corazón es tuyo</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126160000 -0500" stop="20261126170000 -0500">
-    <title>100 Ecuatorianos dicen</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126170000 -0500" stop="20261126180000 -0500">
-    <title>Teleamazonas Noticias Estelar</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126180000 -0500" stop="20261126193000 -0500">
+  <programme channel="teleamazonas.ec" start="20261127000000 -0500" stop="20261127011500 -0500">
     <title>Masterchef Ecuador</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126193000 -0500" stop="20261126210000 -0500">
-    <title>Perdidos de Amor</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126210000 -0500" stop="20261126220000 -0500">
-    <title>Pasión y Poder</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261126220000 -0500" stop="20261126231500 -0500">
-    <title>Masterchef Ecuador</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127000000 -0500" stop="20261127004500 -0500">
-    <title>Yo soy tu madre</title>
   </programme>
   <programme channel="teleamazonas.ec" start="20261127020000 -0500" stop="20261127024500 -0500">
-    <title>24 horas - 3ra emisión</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127024500 -0500" stop="20261127063000 -0500">
-    <title>Teleamazonas Noticias Matinal</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127063000 -0500" stop="20261127090000 -0500">
-    <title>EsTAmañana</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127090000 -0500" stop="20261127100000 -0500">
-    <title>Como dice el dicho</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127100000 -0500" stop="20261127120000 -0500">
-    <title>Teleamazonas Noticias Central</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127120000 -0500" stop="20261127123000 -0500">
-    <title>Deporte Total</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127123000 -0500" stop="20261127143000 -0500">
-    <title>Mi corazón es tuyo</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127160000 -0500" stop="20261127170000 -0500">
-    <title>100 Ecuatorianos dicen</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127170000 -0500" stop="20261127180000 -0500">
-    <title>Teleamazonas Noticias Estelar</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127180000 -0500" stop="20261127193000 -0500">
-    <title>Masterchef Ecuador</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127193000 -0500" stop="20261127210000 -0500">
-    <title>Perdidos de Amor</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127210000 -0500" stop="20261127220000 -0500">
-    <title>Pasión y Poder</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261127220000 -0500" stop="20261127231500 -0500">
-    <title>Masterchef Ecuador</title>
-  </programme>
-  <programme channel="teleamazonas.ec" start="20261128000000 -0500" stop="20261128004500 -0500">
     <title>Yo soy tu madre</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128004500 -0500" stop="20261128013000 -0500">
+  <programme channel="teleamazonas.ec" start="20261127040000 -0500" stop="20261127044500 -0500">
+    <title>24 horas - 3ra emisión</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127044500 -0500" stop="20261127083000 -0500">
+    <title>Teleamazonas Noticias Matinal</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127083000 -0500" stop="20261127110000 -0500">
+    <title>EsTAmañana</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127110000 -0500" stop="20261127120000 -0500">
+    <title>Como dice el dicho</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127120000 -0500" stop="20261127140000 -0500">
+    <title>Teleamazonas Noticias Central</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127140000 -0500" stop="20261127143000 -0500">
+    <title>Deporte Total</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127143000 -0500" stop="20261127163000 -0500">
+    <title>Mi corazón es tuyo</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127180000 -0500" stop="20261127190000 -0500">
+    <title>100 Ecuatorianos dicen</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127190000 -0500" stop="20261127200000 -0500">
+    <title>Teleamazonas Noticias Estelar</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127200000 -0500" stop="20261127213000 -0500">
+    <title>Masterchef Ecuador</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127213000 -0500" stop="20261127230000 -0500">
+    <title>Perdidos de Amor</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261127230000 -0500" stop="20261128000000 -0500">
+    <title>Pasión y Poder</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261128000000 -0500" stop="20261128011500 -0500">
+    <title>Masterchef Ecuador</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261128020000 -0500" stop="20261128024500 -0500">
+    <title>Yo soy tu madre</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261128024500 -0500" stop="20261128033000 -0500">
     <title>24 Horas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128013000 -0500" stop="20261128020000 -0500">
+  <programme channel="teleamazonas.ec" start="20261128033000 -0500" stop="20261128040000 -0500">
     <title>Geeks</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128020000 -0500" stop="20261128030000 -0500">
+  <programme channel="teleamazonas.ec" start="20261128040000 -0500" stop="20261128050000 -0500">
     <title>Tres Patines</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128030000 -0500" stop="20261128033000 -0500">
+  <programme channel="teleamazonas.ec" start="20261128050000 -0500" stop="20261128053000 -0500">
     <title>Game Shakers</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128040000 -0500" stop="20261128050000 -0500">
+  <programme channel="teleamazonas.ec" start="20261128060000 -0500" stop="20261128070000 -0500">
     <title>Drake &amp; Josh</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128050000 -0500" stop="20261128080000 -0500">
+  <programme channel="teleamazonas.ec" start="20261128070000 -0500" stop="20261128100000 -0500">
     <title>Tventas</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128090000 -0500" stop="20261128103000 -0500">
+  <programme channel="teleamazonas.ec" start="20261128110000 -0500" stop="20261128123000 -0500">
     <title>Cine</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128103000 -0500" stop="20261128120000 -0500">
+  <programme channel="teleamazonas.ec" start="20261128123000 -0500" stop="20261128140000 -0500">
     <title>Cine</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128120000 -0500" stop="20261128131500 -0500">
+  <programme channel="teleamazonas.ec" start="20261128140000 -0500" stop="20261128151500 -0500">
     <title>Cine</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128131500 -0500" stop="20261128150000 -0500">
+  <programme channel="teleamazonas.ec" start="20261128151500 -0500" stop="20261128170000 -0500">
     <title>Sábados de cine</title>
   </programme>
-  <programme channel="teleamazonas.ec" start="20261128150000 -0500" stop="20261128170000 -0500">
+  <programme channel="teleamazonas.ec" start="20261128170000 -0500" stop="20261128190000 -0500">
     <title>Sábados de cine</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261128190000 -0500" stop="20261128200500 -0500">
+    <title>Teleamazonas Noticias Central</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261128200500 -0500" stop="20261128210500 -0500">
+    <title>El buscador</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261128210500 -0500" stop="20261128220000 -0500">
+    <title>América Vive</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261128220000 -0500" stop="20261129001500 -0500">
+    <title>Cine</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129001500 -0500" stop="20261129011500 -0500">
+    <title>Aída</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129011500 -0500" stop="20261129020000 -0500">
+    <title>24 Horas</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129020000 -0500" stop="20261129024500 -0500">
+    <title>América Vive</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129024500 -0500" stop="20261129040000 -0500">
+    <title>Geeks</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129040000 -0500" stop="20261129041500 -0500">
+    <title>Tres Patines</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129041500 -0500" stop="20261129050000 -0500">
+    <title>Misa dominical</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129050000 -0500" stop="20261129060000 -0500">
+    <title>Cadena Nacional</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129060000 -0500" stop="20261129080000 -0500">
+    <title>Opción 2026</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129080000 -0500" stop="20261129100000 -0500">
+    <title>Yo soy Betty, la fea</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129100000 -0500" stop="20261129103000 -0500">
+    <title>Opción 2026</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129103000 -0500" stop="20261129120000 -0500">
+    <title>Cine</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129120000 -0500" stop="20261129123000 -0500">
+    <title>Opción 2026</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129123000 -0500" stop="20261129140000 -0500">
+    <title>Cine</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129140000 -0500" stop="20261129143000 -0500">
+    <title>Opción 2026</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129143000 -0500" stop="20261129154500 -0500">
+    <title>Cine</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129154500 -0500" stop="20261129161500 -0500">
+    <title>Opción 2026</title>
+  </programme>
+  <programme channel="teleamazonas.ec" start="20261129161500 -0500" stop="20261129180000 -0500">
+    <title>Cine</title>
   </programme>
 </tv>
